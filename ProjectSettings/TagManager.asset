@@ -11,6 +11,9 @@ TagManager:
   - finish
   - collectible
   - elmas
+  - DegersizEsya
+  - Missile
+  - TasController
   layers:
   - Default
   - TransparentFX

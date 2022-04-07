@@ -1,0 +1,75 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class TasController : MonoBehaviour
+{
+    [Header("TasKonumIcin")]
+    [SerializeField] private GameObject tail;
+    private GameObject tail2;
+    private List<GameObject> tailOfChilds = new List<GameObject>();
+    private GameObject SonChild;
+
+    [Header("TaslarinSiralamasiIcin")]
+    private List<GameObject> taslar = new List<GameObject>();
+
+    void Start()
+    {
+        StartingEvents();
+    }
+
+    public void StartingEvents()
+    {
+        tail2 = tail.transform.GetChild(0).transform.gameObject;
+        for (int i = 0; i < 100; i++)
+        {
+            if (i == 0)
+            {
+                tailOfChilds.Add(tail2.transform.GetChild(0).transform.gameObject);
+                SonChild = tail2.transform.GetChild(0).transform.gameObject;
+            }
+            else
+            {
+                if (SonChild.transform.childCount > 0)
+                {
+                    tailOfChilds.Add(SonChild.transform.GetChild(0).transform.gameObject);
+                    SonChild = SonChild.transform.GetChild(0).transform.gameObject;
+                }
+                else
+                {
+                    break;
+                }
+            }
+        }
+    }
+
+    public void TasDusur(int adet)
+    {
+        for (int i = 0; i < adet; i++)
+        {
+            taslar[taslar.Count - 1].GetComponent<DegerliTas>().TasiDusur();
+            taslar.Remove(taslar[taslar.Count - 1]);
+        }
+    }
+
+    public void TasEkle(GameObject eklenecekTas)
+    {
+        taslar.Add(eklenecekTas);
+
+        
+        eklenecekTas.transform.localScale = Vector3.one * .35f;
+        eklenecekTas.transform.parent = tailOfChilds[taslar.Count].transform;
+        eklenecekTas.transform.localRotation = Quaternion.Euler(Vector3.zero);
+        eklenecekTas.transform.localPosition = Vector3.zero;
+    }
+
+    public void TaslariKonumaGonder()
+    {
+        for (int i = 0; i < taslar.Count; i++)
+        {
+           // taslar[i].GetComponent<DegerliTas>().KonumaGonder();
+        }
+    }
+
+    
+}

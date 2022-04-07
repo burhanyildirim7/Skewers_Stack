@@ -114,6 +114,12 @@ public class UIController : MonoBehaviour
     /// </summary>
     public void ActivateWinScreen()
     {
+        StartCoroutine(ActiveWinScreenDelay());
+    }
+
+    private IEnumerator ActiveWinScreenDelay()
+    {
+        yield return new WaitForSeconds(2f);
         GamePanel.SetActive(false);
         StartCoroutine(WinScreenDelay());
     }

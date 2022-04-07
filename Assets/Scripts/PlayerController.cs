@@ -11,11 +11,16 @@ public class PlayerController : MonoBehaviour
     public bool xVarMi = true;
     public bool collectibleVarMi = true;
 
+    [Header("Controllerler")]
+    private TasController tasController;
+
 
     private void Awake()
     {
         if (instance == null) instance = this;
         //else Destroy(this);
+
+        tasController = GameObject.FindObjectOfType<TasController>();
     }
 
     void Start()
@@ -35,7 +40,7 @@ public class PlayerController : MonoBehaviour
         {
             // COLLECTIBLE CARPINCA YAPILACAKLAR...
             GameController.instance.SetScore(collectibleDegeri); // ORNEK KULLANIM detaylar icin ctrl+click yapip fonksiyon aciklamasini oku
-
+            tasController.TasEkle(other.gameObject);
         }
         else if (other.CompareTag("engel"))
         {
@@ -49,6 +54,7 @@ public class PlayerController : MonoBehaviour
                 // oyuncu fail durumunda bu fonksiyon çağrılacak.. 
 			}
 
+            tasController.TasDusur(1);
 
         }
         else if (other.CompareTag("finish")) 
@@ -56,7 +62,7 @@ public class PlayerController : MonoBehaviour
             // finishe collider eklenecek levellerde...
             // FINISH NOKTASINA GELINCE YAPILACAKLAR... Totalscore artırma, x işlemleri, efektler v.s. v.s.
             GameController.instance.isContinue = false;
-            GameController.instance.ScoreCarp(7);  // Bu fonksiyon normalde x ler hesaplandıktan sonra çağrılacak. Parametre olarak x i alıyor. 
+            //GameController.instance.ScoreCarp(7);  // Bu fonksiyon normalde x ler hesaplandıktan sonra çağrılacak. Parametre olarak x i alıyor. 
             // x değerine göre oyuncunun total scoreunu hesaplıyor.. x li olmayan oyunlarda parametre olarak 1 gönderilecek.
             UIController.instance.ActivateWinScreen(); // finish noktasına gelebildiyse her türlü win screen aktif edilecek.. ama burada değil..
             // normal de bu kodu x ler hesaplandıktan sonra çağıracağız. Ve bu kod çağrıldığında da kazanılan puanlar animasyonlu şekilde artacak..
