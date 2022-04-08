@@ -7,11 +7,11 @@ public class TasController : MonoBehaviour
     [Header("TasKonumIcin")]
     [SerializeField] private GameObject tail;
     private GameObject tail2;
-    private List<GameObject> tailOfChilds = new List<GameObject>();
+    public List<GameObject> tailOfChilds = new List<GameObject>();
     private GameObject SonChild;
 
     [Header("TaslarinSiralamasiIcin")]
-    private List<GameObject> taslar = new List<GameObject>();
+    public List<GameObject> taslar = new List<GameObject>();
     public int tasSayisi;
 
 
@@ -60,22 +60,11 @@ public class TasController : MonoBehaviour
     {
 
         eklenecekTas.GetComponent<DegerliTas>().TasEklemeProcces();
-        eklenecekTas.transform.localScale = Vector3.one * .35f;
-        eklenecekTas.transform.parent = tailOfChilds[taslar.Count].transform;
+        eklenecekTas.GetComponent<DegerliTas>().KonumaGonder(taslar.Count, tailOfChilds[taslar.Count].transform);
+        //eklenecekTas.transform.parent = tailOfChilds[taslar.Count].transform;
         eklenecekTas.transform.localRotation = Quaternion.Euler(Vector3.zero);
-        eklenecekTas.transform.localPosition = Vector3.zero;
 
         taslar.Add(eklenecekTas);
         tasSayisi = taslar.Count;
-    }
-
-    public void TaslariKonumaGonder()
-    {
-        for (int i = 0; i < taslar.Count; i++)
-        {
-           // taslar[i].GetComponent<DegerliTas>().KonumaGonder();
-        }
-    }
-
-    
+    }    
 }
