@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
     [HideInInspector]public int score, elmas; // ayrintilar icin benioku 9. satirdan itibaren bak
 
     [HideInInspector] public bool isContinue;  // ayrintilar icin beni oku 19. satirdan itibaren bak
+    [HideInInspector] public bool isStabbing;
 
 
 	private void Awake()
@@ -20,7 +21,18 @@ public class GameController : MonoBehaviour
 
 	void Start()
     {
+        StartingEvents();
+    }
+
+    public void StartingEvents()
+    {
         isContinue = false;
+        isStabbing = true;
+    }
+    
+    public void ActivateToStabbingMode()
+    {
+        isStabbing = false;
     }
 
 

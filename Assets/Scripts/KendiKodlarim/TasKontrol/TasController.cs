@@ -12,6 +12,8 @@ public class TasController : MonoBehaviour
 
     [Header("TaslarinSiralamasiIcin")]
     private List<GameObject> taslar = new List<GameObject>();
+    public int tasSayisi;
+
 
     void Start()
     {
@@ -50,17 +52,21 @@ public class TasController : MonoBehaviour
             taslar[taslar.Count - 1].GetComponent<DegerliTas>().TasiDusur();
             taslar.Remove(taslar[taslar.Count - 1]);
         }
+
+        tasSayisi = taslar.Count;
     }
 
     public void TasEkle(GameObject eklenecekTas)
     {
-        taslar.Add(eklenecekTas);
 
-        
+        eklenecekTas.GetComponent<DegerliTas>().TasEklemeProcces();
         eklenecekTas.transform.localScale = Vector3.one * .35f;
         eklenecekTas.transform.parent = tailOfChilds[taslar.Count].transform;
         eklenecekTas.transform.localRotation = Quaternion.Euler(Vector3.zero);
         eklenecekTas.transform.localPosition = Vector3.zero;
+
+        taslar.Add(eklenecekTas);
+        tasSayisi = taslar.Count;
     }
 
     public void TaslariKonumaGonder()

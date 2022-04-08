@@ -14,15 +14,10 @@ public class KarakterPaketiMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (GameController.instance.isContinue == true)
+        if (GameController.instance.isContinue && !GameController.instance.isStabbing)
         {
             transform.Translate(Vector3.forward * Time.deltaTime * _speed);
         }
-        else
-        {
-
-        }
-        
     }
 
 }

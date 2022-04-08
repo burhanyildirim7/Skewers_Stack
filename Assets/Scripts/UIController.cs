@@ -53,6 +53,11 @@ public class UIController : MonoBehaviour
 
     }
 
+    public void TapToStartButtonUp()
+    {
+        GameController.instance.ActivateToStabbingMode();
+    }
+
     // RESTART TUSUNA BASILDISINDA  --- LOOSE EKRANINDA
     public void RestartButtonClick()
     {

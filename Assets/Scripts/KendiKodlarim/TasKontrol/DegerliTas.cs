@@ -6,25 +6,28 @@ public class DegerliTas : MonoBehaviour
 {
     [Header("Componentler")]
     private Rigidbody fizik;
+    private BoxCollider collider;
+
+    [Header("Efekt")]
+    [SerializeField] private ParticleSystem efekt;
 
     void Start()
     {
         fizik = GetComponent<Rigidbody>();
+        collider = GetComponent<BoxCollider>();
     }
 
     public void TasiDusur()
     {
+        collider.enabled = true;
         fizik.useGravity = true;
+        collider.isTrigger = false;
         transform.parent = null;
     }
 
-    public void KonumaGonder(Vector3 konum)
+    public void TasEklemeProcces()
     {
-        while(Vector3.Distance(transform.position, konum) >= .1f)
-        {
-            transform.position = Vector3.Lerp(transform.position, konum, Time.deltaTime * 10);
-        }
+        Instantiate(efekt, transform.position, Quaternion.identity);
+        collider.enabled = false;
     }
-
-
 }

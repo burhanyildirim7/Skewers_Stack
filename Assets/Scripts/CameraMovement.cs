@@ -9,9 +9,20 @@ public class CameraMovement : MonoBehaviour
 
     Vector3 aradakiFark;
 
+    [Header("Controllerler")]
+    private TasController tasController;
+
+
+    [Header("AradakiMesafeninArtirilmasiIcin")]
+    [SerializeField] private Vector3 kameraMesafeArtirma;
+    [SerializeField] private int kameraPosDegisimSayisi;
+
 
     void Start()
     {
+        tasController = GameObject.FindObjectOfType<TasController>();
+
+
         Player = GameObject.FindGameObjectWithTag("Player");
         aradakiFark = transform.position - Player.transform.position;
     }
@@ -19,9 +30,13 @@ public class CameraMovement : MonoBehaviour
 
     void Update()
     {
-
-        transform.position = Vector3.Lerp(transform.position, new Vector3(Player.transform.position.x, Player.transform.position.y + aradakiFark.y, Player.transform.position.z + aradakiFark.z), Time.deltaTime * 5f);
-
+        if(tasController.tasSayisi >= kameraPosDegisimSayisi)
+        {
+            transform.position = Vector3.Lerp(transform.position, new Vector3(Player.transform.position.x, Player.transform.position.y + aradakiFark.y + kameraMesafeArtirma.y * (tasController.tasSayisi - kameraPosDegisimSayisi), Player.transform.position.z + aradakiFark.z + kameraMesafeArtirma.z * (tasController.tasSayisi - kameraPosDegisimSayisi)), Time.deltaTime * 5f);
+        }
+        else
+        {
+            transform.position = Vector3.Lerp(transform.position, new Vector3(Player.transform.position.x, Player.transform.position.y + aradakiFark.y, Player.transform.position.z + aradakiFark.z), Time.deltaTime * 5f);
+        }
     }
-
 }

@@ -14,6 +14,10 @@ public class PlayerController : MonoBehaviour
     [Header("Controllerler")]
     private TasController tasController;
 
+    [Header("Efekt")]
+    [SerializeField] private ParticleSystem engelCarpmaEfekt;
+    private Transform igne;
+
 
     private void Awake()
     {
@@ -41,6 +45,8 @@ public class PlayerController : MonoBehaviour
             // COLLECTIBLE CARPINCA YAPILACAKLAR...
             GameController.instance.SetScore(collectibleDegeri); // ORNEK KULLANIM detaylar icin ctrl+click yapip fonksiyon aciklamasini oku
             tasController.TasEkle(other.gameObject);
+            other.transform.gameObject.tag = "Untagged";
+
         }
         else if (other.CompareTag("engel"))
         {
@@ -55,7 +61,9 @@ public class PlayerController : MonoBehaviour
 			}
 
             tasController.TasDusur(1);
+            other.transform.gameObject.tag = "Untagged"; //Bir engelin bir tane tas dururebilmesi icindir
 
+            Instantiate(engelCarpmaEfekt, igne.transform.position + igne.transform.forward * transform.localScale.z / 2, Quaternion.Euler(Vector3.up * transform.rotation.eulerAngles.y + Vector3.up * 180));
         }
         else if (other.CompareTag("finish")) 
         {
@@ -78,13 +86,12 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     public void StartingEvents()
     {
-
+        igne = transform.GetChild(0).transform;
         transform.parent.transform.rotation = Quaternion.Euler(0, 0, 0);
         transform.parent.transform.position = Vector3.zero;
         GameController.instance.isContinue = false;
         GameController.instance.score = 0;
         transform.position = new Vector3(0, transform.position.y, 0);
-        GetComponent<Collider>().enabled = true;
 
     }
 
