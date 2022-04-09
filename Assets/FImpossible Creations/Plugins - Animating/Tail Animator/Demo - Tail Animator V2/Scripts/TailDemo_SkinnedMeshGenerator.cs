@@ -35,7 +35,7 @@ public class TailDemo_SkinnedMeshGenerator : MonoBehaviour
     Vector3[,] toDraw;
     List<VertGenHelper> toDrawHelpers;
 
-    private void Start()
+    private void Awake()
     {
         if ( RandomizeAtStart)
         {
@@ -58,14 +58,40 @@ public class TailDemo_SkinnedMeshGenerator : MonoBehaviour
                 LengthScale.SmoothTangents(i, UnityEngine.Random.Range(0.35f, .6f));
             }
 
-            BonesCount += UnityEngine.Random.Range(-3, 8);
+           /* BonesCount += UnityEngine.Random.Range(-3, 8);
             Fatness *= UnityEngine.Random.Range(0.85f, 1.25f);
-            ForwardLength *= UnityEngine.Random.Range(0.925f, 1.125f);
+            ForwardLength *= UnityEngine.Random.Range(0.925f, 1.125f);*/
         }
 
         //StartCoroutine(GenerateFrameByFrame()); // Showing process of generating tail frame by frame
         //GenerateMesh(false); // Just generating tail mesh and adding meshFilter
         SkinMesh();
+    }
+
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.K))
+        {
+            KemikEkle(3);
+        }
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            transform.Translate(Vector3.forward * Time.deltaTime * 50);
+        }
+
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.Translate(Vector3.forward * Time.deltaTime * -5);
+        }
+    }
+
+    public void KemikEkle(int sayi)
+    {
+        BonesCount += sayi;
+        TargetTailAnimator.LengthMultiplier += sayi;
+        
+        
     }
 
     private void OnValidate()
