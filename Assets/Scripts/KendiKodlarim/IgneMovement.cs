@@ -71,7 +71,7 @@ public class IgneMovement : MonoBehaviour
 
     private IEnumerator IgneSaplamaDurdur()
     {
-        yield return new WaitForSeconds(1.25f);
+        yield return new WaitForSeconds(1f);
         anim.Play("Sallanma");
         GameController.instance.isStabbing = false;
         while (igne.transform.rotation.eulerAngles.y >= 1)

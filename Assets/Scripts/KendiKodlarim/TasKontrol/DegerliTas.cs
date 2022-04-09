@@ -42,6 +42,11 @@ public class DegerliTas : MonoBehaviour
     public void KonumaGonder(int childSayisi, Transform parent1)
     {
         StartCoroutine(KonumaGonder2(childSayisi, parent1));
+        /*if(tasController.taslar.Count >=  1)
+        {
+            Debug.Log(tasController.taslar[0].name);
+        }*/
+
     }
 
     public IEnumerator KonumaGonder2(int childSayisi, Transform parent1) //TasController icerisinden geliyor
@@ -51,25 +56,25 @@ public class DegerliTas : MonoBehaviour
 
         while (gecilenNoktaSayisi2 <= 1)
         {
-            if (Vector3.Distance(transform.position, noktalar[gecilenNoktaSayisi2].transform.position) >= .05f)
+            if (Vector3.Distance(transform.position, noktalar[gecilenNoktaSayisi2].transform.position) >= .1f)
             {
-                transform.position = Vector3.MoveTowards(transform.position, noktalar[gecilenNoktaSayisi2].transform.position, Time.deltaTime * 6);
+                transform.position = Vector3.MoveTowards(transform.position, noktalar[gecilenNoktaSayisi2].transform.position, Time.deltaTime * 10);
             }
             else
             {
                 gecilenNoktaSayisi2++;
             }
-
-            transform.localScale = Vector3.Lerp(transform.localScale, Vector3.one * .35f, Time.deltaTime * 15);
             yield return null;
         }
 
 
         while (gecilenNoktaSayisi <= childSayisi)
         {
-            if (Vector3.Distance(transform.position, tasController.tailOfChilds[gecilenNoktaSayisi].transform.position) >= .15f)
+            if (Vector3.Distance(transform.position, tasController.taslar[gecilenNoktaSayisi].transform.position) >= .01f)
             {
-                transform.position = Vector3.MoveTowards(transform.position, tasController.tailOfChilds[gecilenNoktaSayisi].transform.position, Time.deltaTime * 10);
+                transform.position = Vector3.MoveTowards(transform.position, tasController.taslar[gecilenNoktaSayisi].transform.position, Time.deltaTime * 15);
+                //Debug.Log(tasController.taslar[0].transform.position);
+                transform.parent = tasController.taslar[gecilenNoktaSayisi].transform;
             }
             else
             {
@@ -77,12 +82,12 @@ public class DegerliTas : MonoBehaviour
                 if (gecilenNoktaSayisi - 1 == childSayisi)
                 {
                     transform.parent = parent1;
-                    Debug.Log(parent1.name);
+                    //  Debug.Log(parent1.name);
                     transform.rotation = Quaternion.Euler(Vector3.zero);
+                    transform.localPosition = Vector3.zero;
+                    break;
                 }
             }
-
-            transform.localScale = Vector3.Lerp(transform.localScale, Vector3.one * .35f, Time.deltaTime * 15);
             yield return null;
         }
     }

@@ -7,7 +7,8 @@ public class TasController : MonoBehaviour
     [Header("TasKonumIcin")]
     [SerializeField] private GameObject tail;
     private GameObject tail2;
-    public List<GameObject> tailOfChilds = new List<GameObject>();
+    public List<GameObject> childsOfTheTail = new List<GameObject>();
+    public List<GameObject> allChildsTail = new List<GameObject>();
     private GameObject SonChild;
 
     [Header("TaslarinSiralamasiIcin")]
@@ -23,18 +24,23 @@ public class TasController : MonoBehaviour
     public void StartingEvents()
     {
         tail2 = tail.transform.GetChild(0).transform.gameObject;
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 200; i++)
         {
             if (i == 0)
             {
-                tailOfChilds.Add(tail2.transform.GetChild(0).transform.gameObject);
+                childsOfTheTail.Add(tail2.transform.GetChild(0).transform.gameObject);
+                allChildsTail.Add(tail2.transform.GetChild(0).transform.gameObject);
                 SonChild = tail2.transform.GetChild(0).transform.gameObject;
             }
             else
             {
                 if (SonChild.transform.childCount > 0)
                 {
-                    tailOfChilds.Add(SonChild.transform.GetChild(0).transform.gameObject);
+                    if( i % 2 == 0)
+                    {
+                        childsOfTheTail.Add(SonChild.transform.GetChild(0).transform.gameObject);
+                    }
+                    allChildsTail.Add(SonChild.transform.GetChild(0).transform.gameObject);
                     SonChild = SonChild.transform.GetChild(0).transform.gameObject;
                 }
                 else
@@ -58,9 +64,9 @@ public class TasController : MonoBehaviour
 
     public void TasEkle(GameObject eklenecekTas)
     {
-
+        eklenecekTas.transform.localScale = Vector3.one * .5f;
         eklenecekTas.GetComponent<DegerliTas>().TasEklemeProcces();
-        eklenecekTas.GetComponent<DegerliTas>().KonumaGonder(taslar.Count, tailOfChilds[taslar.Count].transform);
+        eklenecekTas.GetComponent<DegerliTas>().KonumaGonder(taslar.Count, childsOfTheTail[taslar.Count].transform);
         //eklenecekTas.transform.parent = tailOfChilds[taslar.Count].transform;
         eklenecekTas.transform.localRotation = Quaternion.Euler(Vector3.zero);
 

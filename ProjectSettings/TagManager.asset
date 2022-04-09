@@ -15,6 +15,7 @@ TagManager:
   - Missile
   - TasController
   - IgneNokta
+  - Tail
   layers:
   - Default
   - TransparentFX

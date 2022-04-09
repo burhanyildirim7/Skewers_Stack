@@ -343,7 +343,7 @@ GameObject:
   m_Layer: 0
   m_Name: Nokta (0)
   m_TagString: IgneNokta
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -355,7 +355,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 526949423}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -374,7 +374,7 @@ GameObject:
   m_Layer: 0
   m_Name: Nokta (1)
   m_TagString: IgneNokta
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -386,7 +386,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 571375082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -438,7 +438,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tail: {fileID: 4914503710540713164}
-  tailOfChilds: []
+  childsOfTheTail: []
+  allChildsTail: []
   taslar: []
   tasSayisi: 0
 --- !u!1 &705507993
@@ -535,6 +536,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &785805041
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 785805042}
+  - component: {fileID: 785805043}
+  m_Layer: 0
+  m_Name: HalkaController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &785805042
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785805041}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1603971764}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &785805043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785805041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fca559c8d0d29441a1e869182b0c86a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &955729541
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,8 +735,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6826d214a2b9d40ab90568c700cf2ca4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kameraMesafeArtirma: {x: 0, y: 1, z: -1}
-  kameraPosDegisimSayisi: 2
+  kameraMesafeArtirma: {x: 0, y: 0.8, z: -0.8}
+  kameraPosDegisimSayisi: 4
 --- !u!1 &1124119772
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,6 +965,7 @@ Transform:
   - {fileID: 955729543}
   - {fileID: 479298108}
   - {fileID: 691903386}
+  - {fileID: 785805042}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23678,8 +23724,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4914503710540713164}
   m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 0.0800004, z: -0.495}
-  m_LocalScale: {x: 4, y: 4, z: 0.5}
+  m_LocalPosition: {x: 0, y: 0.08000055, z: -0.495}
+  m_LocalScale: {x: 6.666666, y: 6.666666, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1650012826}
@@ -23698,7 +23744,7 @@ GameObject:
   - component: {fileID: 5017104762110847694}
   m_Layer: 0
   m_Name: Tail
-  m_TagString: Untagged
+  m_TagString: Tail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24098,11 +24144,11 @@ MonoBehaviour:
   UseWaving: 1
   CosinusAdd: 0
   FixedCycle: 0
-  WavingSpeed: 2.5
-  WavingRange: 0.4
-  WavingAxis: {x: 1, y: 1, z: 1}
-  WavingType: 1
-  AlternateWave: 1
+  WavingSpeed: 0
+  WavingRange: 0
+  WavingAxis: {x: 0, y: 0, z: 0}
+  WavingType: 0
+  AlternateWave: 0.25
   UseWind: 0
   WindEffectPower: 1
   WindTurbulencePower: 1
@@ -24212,8 +24258,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   DeflectOnlyCollisions: 1
-  _Editor_Category: 0
-  _Editor_FeaturesCategory: 0
+  _Editor_Category: 1
+  _Editor_FeaturesCategory: 2
   DrawGizmos: 1
   StartBone: {fileID: 0}
   EndBone: {fileID: 0}
@@ -24228,7 +24274,7 @@ MonoBehaviour:
   Curling: 0.5
   Springiness: 0
   MaxStretching: 0.375
-  AngleLimit: 181
+  AngleLimit: 180
   AngleLimitAxis: {x: 0, y: 0, z: 0}
   LimitAxisRange: {x: 0, y: 0}
   LimitSmoothing: 0.5
@@ -24236,10 +24282,10 @@ MonoBehaviour:
   MotionInfluenceInY: 1
   IncludeParent: 1
   UnifyBendiness: 0
-  ReactionSpeed: 0.9
+  ReactionSpeed: 0.256
   Sustain: 0
-  RotationRelevancy: 1
-  SmoothingStyle: 1
+  RotationRelevancy: 0.468
+  SmoothingStyle: 2
   DeltaType: 4
   UpdateAsLast: 1
   DetectZeroKeyframes: 1
@@ -24263,15 +24309,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circlePoints: 16
-  LengthSegments: 18
-  ForwardLength: 5
+  LengthSegments: 180
+  ForwardLength: 40
   Fatness: 0.4
   LengthScale:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 0.0990566
+      time: 0.008333385
+      value: 0.4292453
       inSlope: -0.013964498
       outSlope: -0.013964498
       tangentMode: 34
@@ -24279,8 +24325,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.49175918
-      value: 0.09218943
+      time: 0.50009257
+      value: 0.42237812
       inSlope: -0.02904169
       outSlope: -0.02904169
       tangentMode: 0
@@ -24288,8 +24334,8 @@ MonoBehaviour:
       inWeight: 0.36205506
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.9875
-      value: 0.06366655
+      time: 0.9958334
+      value: 0.39385524
       inSlope: -0.05753587
       outSlope: -0.05753587
       tangentMode: 34
@@ -24302,7 +24348,7 @@ MonoBehaviour:
   RandomizeAtStart: 0
   mat: {fileID: 2100000, guid: b0866ec1978db7842b466f89e5227391, type: 2}
   DrawGizmos: 1
-  BonesCount: 12
+  BonesCount: 180
   AddTailAnimator: 1
   DetachForOptimization: 0
   TargetTailAnimator: {fileID: 5017104762110847694}

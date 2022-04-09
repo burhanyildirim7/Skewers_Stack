@@ -35,7 +35,7 @@ public class TailDemo_SkinnedMeshGenerator : MonoBehaviour
     Vector3[,] toDraw;
     List<VertGenHelper> toDrawHelpers;
 
-    private void Awake()
+    private void Start()
     {
         if ( RandomizeAtStart)
         {
@@ -58,7 +58,7 @@ public class TailDemo_SkinnedMeshGenerator : MonoBehaviour
                 LengthScale.SmoothTangents(i, UnityEngine.Random.Range(0.35f, .6f));
             }
 
-            //BonesCount += UnityEngine.Random.Range(-3, 8);
+            BonesCount += UnityEngine.Random.Range(-3, 8);
             Fatness *= UnityEngine.Random.Range(0.85f, 1.25f);
             ForwardLength *= UnityEngine.Random.Range(0.925f, 1.125f);
         }
@@ -450,5 +450,6 @@ public class TailDemo_SkinnedMeshGenerator : MonoBehaviour
                 //tail.SyncWithAnimator = false;
             }
         }
+
     }
 }
