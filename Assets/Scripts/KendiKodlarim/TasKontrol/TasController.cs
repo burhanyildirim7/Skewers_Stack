@@ -36,7 +36,7 @@ public class TasController : MonoBehaviour
             {
                 if (SonChild.transform.childCount > 0)
                 {
-                    if( i % 2 == 0)
+                    if( i % 8 == 0)
                     {
                         childsOfTheTail.Add(SonChild.transform.GetChild(0).transform.gameObject);
                     }
