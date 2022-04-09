@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 836703900849839114}
   - component: {fileID: 8371330719456820816}
   - component: {fileID: 5292980579661120035}
+  - component: {fileID: 3370119929950544381}
   m_Layer: 0
   m_Name: gem_18
   m_TagString: collectible
@@ -113,7 +114,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
 --- !u!114 &5292980579661120035
 MonoBehaviour:
@@ -129,3 +130,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   efekt: {fileID: 0}
   noktalar: []
+--- !u!95 &3370119929950544381
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746571083351624}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8f23c87e1f425624483987cfcf6c7ae7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

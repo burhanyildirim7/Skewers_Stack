@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5785764173065046098}
   - component: {fileID: 444177409703286654}
   - component: {fileID: -3103831418135881003}
+  - component: {fileID: 8717545521512825463}
   m_Layer: 0
   m_Name: Poop
   m_TagString: engel
@@ -99,3 +100,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.2648232, y: 2.1404335, z: 2.2080393}
   m_Center: {x: 0, y: 1.0779585, z: 0}
+--- !u!95 &8717545521512825463
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6289170300132102762}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8f23c87e1f425624483987cfcf6c7ae7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
