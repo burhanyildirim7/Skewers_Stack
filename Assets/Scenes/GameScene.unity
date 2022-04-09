@@ -331,6 +331,37 @@ Transform:
   m_Father: {fileID: 1603971764}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &521211408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 521211409}
+  m_Layer: 0
+  m_Name: Kolye
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &521211409
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521211408}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.9285492, y: 2.6917827, z: 37.23971}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &526949423
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,6 +611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fca559c8d0d29441a1e869182b0c86a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  "\u0131p": {fileID: 0}
 --- !u!1 &955729541
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,6 +801,7 @@ MonoBehaviour:
   score: 0
   elmas: 0
   isContinue: 0
+  isFinished: 0
   isStabbing: 0
 --- !u!4 &1124119774
 Transform:
@@ -23812,8 +23845,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.0083351135
-      value: 0.5518799
+      time: 0
+      value: 0.92546844
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -23821,8 +23854,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.31756535
-      value: 0.080504954
+      time: 0.259231
+      value: 0.8022304
       inSlope: -0.08293737
       outSlope: -0.08293737
       tangentMode: 0
@@ -23830,8 +23863,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.56672794
     - serializedVersion: 3
-      time: 0.8681363
-      value: 0.3310403
+      time: 0.7264432
+      value: 0.48957908
       inSlope: -0.36899242
       outSlope: -0.36899242
       tangentMode: 0
@@ -23839,8 +23872,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1
-      value: 0.06320539
+      time: 0.9541626
+      value: 0.0037876368
       inSlope: 0.24776521
       outSlope: 0.24776521
       tangentMode: 0
@@ -24107,7 +24140,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  LengthMultiplier: 5
+  LengthMultiplier: 1
   UseLengthMulCurve: 0
   LengthMulCurve:
     serializedVersion: 2
@@ -29368,7 +29401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   circlePoints: 16
   LengthSegments: 180
-  ForwardLength: 5
+  ForwardLength: 40
   Fatness: 0.4
   LengthScale:
     serializedVersion: 2
@@ -29397,7 +29430,7 @@ MonoBehaviour:
   RandomizeAtStart: 0
   mat: {fileID: 2100000, guid: b0866ec1978db7842b466f89e5227391, type: 2}
   DrawGizmos: 1
-  BonesCount: 180
+  BonesCount: 181
   AddTailAnimator: 1
   DetachForOptimization: 0
   TargetTailAnimator: {fileID: 5017104762110847694}

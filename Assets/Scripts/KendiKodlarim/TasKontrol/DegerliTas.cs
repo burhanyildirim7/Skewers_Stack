@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DegerliTas : MonoBehaviour
 {
+    private bool toplandiMi;
+
     [Header("Componentler")]
     private Rigidbody fizik;
     private BoxCollider collider;
@@ -16,13 +18,25 @@ public class DegerliTas : MonoBehaviour
 
     [Header("Noktalar")]
     public GameObject[] noktalar;
+
+    [Header("SonTarafIcinGerekliOlanlar")]
+    private int childSayisi;
+
+    private WaitForSeconds sonTarafBekleme = new WaitForSeconds(.05f);
     void Start()
     {
+        StartingEvents();
+
+
+    }
+
+    private void StartingEvents()
+    {
+        toplandiMi = false;
         fizik = GetComponent<Rigidbody>();
         collider = GetComponent<BoxCollider>();
         tasController = GameObject.FindObjectOfType<TasController>();
         noktalar = GameObject.FindGameObjectsWithTag("IgneNokta");
-
     }
 
     public void TasiDusur()
@@ -31,22 +45,37 @@ public class DegerliTas : MonoBehaviour
         fizik.useGravity = true;
         collider.isTrigger = false;
         transform.parent = null;
+        toplandiMi = false;
     }
 
-    public void TasEklemeProcces()
+    public void TasEklemeProcces(int sayi)
     {
         Instantiate(efekt, transform.position, Quaternion.identity);
         collider.enabled = false;
+        toplandiMi = true;
+        childSayisi = sayi;
+        Debug.Log(childSayisi);
+        StartCoroutine(SonTarafIcinBekle());
+    }
+
+    IEnumerator SonTarafIcinBekle()
+    {
+        while (toplandiMi)
+        {
+            if (GameController.instance.isFinished)
+            {
+                Debug.Log((int)(childSayisi * 180 / tasController.taslar.Count));
+                transform.parent = tasController.allChildsTail[(int)(childSayisi * 180 / tasController.taslar.Count)].transform;
+                transform.localPosition = Vector3.zero;
+                break;
+            }
+            yield return sonTarafBekleme;
+        }
     }
 
     public void KonumaGonder(int childSayisi, Transform parent1)
     {
         StartCoroutine(KonumaGonder2(childSayisi, parent1));
-        /*if(tasController.taslar.Count >=  1)
-        {
-            Debug.Log(tasController.taslar[0].name);
-        }*/
-
     }
 
     public IEnumerator KonumaGonder2(int childSayisi, Transform parent1) //TasController icerisinden geliyor

@@ -12,21 +12,25 @@ public class HalkaController : MonoBehaviour
     private float eksenY;
     private float eksenZ;
 
+    [Header("Ip")]
+    [SerializeField] private GameObject ýp;
 
     //120
     void Start()
     {
-        tasController = GameObject.FindObjectOfType<TasController>();    
+        tasController = GameObject.FindObjectOfType<TasController>();
+
+        StartingEvents();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void StartingEvents()
     {
-        
+        ýp = Resources.Load("Ip") as GameObject;
     }
 
     public void FinishingEvents()
     {
+
         for (int i = 0; i < tasController.allChildsTail.Count; i++)
         {
             // tasController.allChildsTail[i].transform.position = Vector3.forward * 120;
@@ -35,5 +39,6 @@ public class HalkaController : MonoBehaviour
 
            // eksenX += .01f;
         }
+        GameController.instance.isFinished = true;
     }
 }

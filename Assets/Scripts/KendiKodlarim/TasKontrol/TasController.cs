@@ -36,7 +36,7 @@ public class TasController : MonoBehaviour
             {
                 if (SonChild.transform.childCount > 0)
                 {
-                    if( i % 8 == 0)
+                    if (i % 2 == 0)
                     {
                         childsOfTheTail.Add(SonChild.transform.GetChild(0).transform.gameObject);
                     }
@@ -65,12 +65,12 @@ public class TasController : MonoBehaviour
     public void TasEkle(GameObject eklenecekTas)
     {
         eklenecekTas.transform.localScale = Vector3.one * .5f;
-        eklenecekTas.GetComponent<DegerliTas>().TasEklemeProcces();
+        eklenecekTas.GetComponent<DegerliTas>().TasEklemeProcces(taslar.Count);
         eklenecekTas.GetComponent<DegerliTas>().KonumaGonder(taslar.Count, childsOfTheTail[taslar.Count].transform);
         //eklenecekTas.transform.parent = tailOfChilds[taslar.Count].transform;
         eklenecekTas.transform.localRotation = Quaternion.Euler(Vector3.zero);
 
         taslar.Add(eklenecekTas);
         tasSayisi = taslar.Count;
-    }    
+    }
 }
