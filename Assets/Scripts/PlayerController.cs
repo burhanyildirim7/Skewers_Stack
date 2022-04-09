@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
             
             tailAnimator2.TailAnimatorAmount = .01f;
             StartCoroutine(Bekle());
-
+            
         }
     }
 
