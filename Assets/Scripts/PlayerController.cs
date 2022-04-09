@@ -97,8 +97,8 @@ public class PlayerController : MonoBehaviour
     private IEnumerator Bekle()
     {
         yield return new WaitForSeconds(.05f);
-        tail.transform.position = Vector3.right * .4f + Vector3.up * 19 + Vector3.forward * 117;
-        tail.transform.rotation = Quaternion.Euler(Vector3.up * 90 - Vector3.forward * 72);
+        tail.transform.position = transform.position + Vector3.forward * 5;
+        tail.transform.rotation = Quaternion.Euler(Vector3.up * 90 - Vector3.forward * 90);
         tail.GetComponent<TailAnimator2>().enabled = false;
         halkaController.FinishingEvents();
     }

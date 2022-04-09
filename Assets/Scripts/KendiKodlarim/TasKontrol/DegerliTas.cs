@@ -46,6 +46,7 @@ public class DegerliTas : MonoBehaviour
         collider.isTrigger = false;
         transform.parent = null;
         toplandiMi = false;
+        transform.parent = null;
     }
 
     public void TasEklemeProcces(int sayi)
@@ -54,7 +55,6 @@ public class DegerliTas : MonoBehaviour
         collider.enabled = false;
         toplandiMi = true;
         childSayisi = sayi;
-        Debug.Log(childSayisi);
         StartCoroutine(SonTarafIcinBekle());
     }
 
@@ -64,7 +64,6 @@ public class DegerliTas : MonoBehaviour
         {
             if (GameController.instance.isFinished)
             {
-                Debug.Log((int)(childSayisi * 180 / tasController.taslar.Count));
                 transform.parent = tasController.allChildsTail[(int)(childSayisi * 180 / tasController.taslar.Count)].transform;
                 transform.localPosition = Vector3.zero;
                 break;

@@ -12,8 +12,12 @@ public class HalkaController : MonoBehaviour
     private float eksenY;
     private float eksenZ;
 
-    [Header("Ip")]
-    [SerializeField] private GameObject ýp;
+    [Header("IpKonumIcinGereklidir")]
+    private GameObject tail;
+
+    private GameObject hedef1;
+    private GameObject hedef2;
+    private GameObject hedef3;
 
     //120
     void Start()
@@ -21,16 +25,26 @@ public class HalkaController : MonoBehaviour
         tasController = GameObject.FindObjectOfType<TasController>();
 
         StartingEvents();
+        StartCoroutine(bekle());
+    }
+
+    IEnumerator bekle()
+    {
+        yield return new WaitForSeconds(.1f);
+        hedef1 = GameObject.FindWithTag("Noktalar").transform.GetChild(0).transform.gameObject;
+        hedef2 = GameObject.FindWithTag("Noktalar").transform.GetChild(1).transform.gameObject;
+        hedef3 = GameObject.FindWithTag("Noktalar").transform.GetChild(2).transform.gameObject;
     }
 
     public void StartingEvents()
     {
-        ýp = Resources.Load("Ip") as GameObject;
+       
+        tail = GameObject.FindWithTag("Tail");
     }
+
 
     public void FinishingEvents()
     {
-
         for (int i = 0; i < tasController.allChildsTail.Count; i++)
         {
             // tasController.allChildsTail[i].transform.position = Vector3.forward * 120;
@@ -40,5 +54,64 @@ public class HalkaController : MonoBehaviour
            // eksenX += .01f;
         }
         GameController.instance.isFinished = true;
+        StartCoroutine(Hedef1Git());
     }
+
+    IEnumerator Hedef1Git()
+    {
+        while(true)
+        {
+            if(Vector3.Distance(tail.transform.position, hedef1.transform.position) >= .05f)
+            {
+                tail.transform.position = Vector3.MoveTowards(tail.transform.position, hedef1.transform.position, Time.deltaTime * 15);
+            }
+            else
+            {
+                StartCoroutine(Hedef2Git());
+                break;
+            }
+
+            yield return null;
+        }
+    }
+
+    IEnumerator Hedef2Git()
+    {
+        while (true)
+        {
+            if (Vector3.Distance(tail.transform.position, hedef2.transform.position) >= .05f)
+            {
+                tail.transform.position = Vector3.MoveTowards(tail.transform.position, hedef2.transform.position, Time.deltaTime * 15);
+                tail.transform.rotation = Quaternion.Slerp(tail.transform.rotation, hedef2.transform.rotation, Time.deltaTime * 3);
+            }
+            else
+            {
+                StartCoroutine(Hedef3Git());
+                break;
+            }
+
+            yield return null;
+        }
+    }
+
+    IEnumerator Hedef3Git()
+    {
+        while (true)
+        {
+            if (Vector3.Distance(tail.transform.position, hedef3.transform.position) >= .05f)
+            {
+                tail.transform.position = Vector3.MoveTowards(tail.transform.position, hedef3.transform.position, Time.deltaTime * 5);
+                tail.transform.rotation = Quaternion.Slerp(tail.transform.rotation, hedef3.transform.rotation, Time.deltaTime * 2);
+                tail.transform.localScale = Vector3.MoveTowards(tail.transform.localScale, Vector3.one * .05f, Time.deltaTime * 1.75f);
+            }
+            else
+            {
+                break;
+            }
+
+            yield return null;
+        }
+    }
+
+
 }

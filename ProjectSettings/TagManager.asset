@@ -16,6 +16,7 @@ TagManager:
   - TasController
   - IgneNokta
   - Tail
+  - Noktalar
   layers:
   - Default
   - TransparentFX

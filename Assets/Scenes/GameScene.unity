@@ -331,37 +331,6 @@ Transform:
   m_Father: {fileID: 1603971764}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &521211408
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 521211409}
-  m_Layer: 0
-  m_Name: Kolye
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &521211409
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 521211408}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9285492, y: 2.6917827, z: 37.23971}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &526949423
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,7 +580,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fca559c8d0d29441a1e869182b0c86a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "\u0131p": {fileID: 0}
 --- !u!1 &955729541
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,7 +735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6826d214a2b9d40ab90568c700cf2ca4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kameraMesafeArtirma: {x: 0, y: 0.8, z: -0.8}
+  kameraMesafeArtirma: {x: 0, y: 0.8, z: -0.975}
   kameraPosDegisimSayisi: 4
 --- !u!1 &1124119772
 GameObject:
@@ -1374,8 +1342,9 @@ MonoBehaviour:
   tempLevelNo: 0
   totalLevelNo: 0
   levels:
-  - {fileID: 3004594309123180474, guid: 02b74dad36c270e4abbc31bc27c99eac, type: 3}
-  - {fileID: 3004594309123180474, guid: 02b74dad36c270e4abbc31bc27c99eac, type: 3}
+  - {fileID: 3319144378580908708, guid: f0e7c378929b97b4b900394b5405f977, type: 3}
+  - {fileID: 5327193437751063747, guid: 08cac77d61281bd4fbe5be4890b88f53, type: 3}
+  - {fileID: 6356383363625701071, guid: 012b59a71a833e84aa0a83408ef045c4, type: 3}
 --- !u!1 &664173345876672193
 GameObject:
   m_ObjectHideFlags: 0
@@ -29349,7 +29318,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   DeflectOnlyCollisions: 1
-  _Editor_Category: 1
+  _Editor_Category: 3
   _Editor_FeaturesCategory: 2
   DrawGizmos: 1
   StartBone: {fileID: 0}
