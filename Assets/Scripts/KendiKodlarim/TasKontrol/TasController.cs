@@ -5,8 +5,7 @@ using UnityEngine;
 public class TasController : MonoBehaviour
 {
     [Header("TasKonumIcin")]
-    [SerializeField] private GameObject tail;
-    private GameObject tail2;
+    private GameObject tail2;                                            //Tailin bir alt objesidir
     public List<GameObject> childsOfTheTail = new List<GameObject>();
     public List<GameObject> allChildsTail = new List<GameObject>();
     private GameObject SonChild;
@@ -21,9 +20,12 @@ public class TasController : MonoBehaviour
         StartingEvents();
     }
 
-    public void StartingEvents()
+    public void IpKemikleriniBul() //Halka Controller icerisinden geliyor
     {
-        tail2 = tail.transform.GetChild(0).transform.gameObject;
+        childsOfTheTail.Clear();
+        allChildsTail.Clear();
+
+        tail2 = GameObject.FindWithTag("Tail").transform.GetChild(0).transform.gameObject; 
         for (int i = 0; i < 200; i++)
         {
             if (i == 0)
@@ -51,6 +53,19 @@ public class TasController : MonoBehaviour
         }
     }
 
+
+    public void StartingEvents()
+    {
+        for (int i = 0; i < taslar.Count; i++)
+        {
+            Destroy(taslar[i]);
+        }
+        taslar.Clear();
+
+        tasSayisi = taslar.Count;
+    }
+
+   
     public void TasDusur(int adet)
     {
         for (int i = 0; i < adet; i++)
@@ -67,7 +82,6 @@ public class TasController : MonoBehaviour
         eklenecekTas.transform.localScale = Vector3.one * .5f;
         eklenecekTas.GetComponent<DegerliTas>().TasEklemeProcces(taslar.Count);
         eklenecekTas.GetComponent<DegerliTas>().KonumaGonder(taslar.Count, childsOfTheTail[taslar.Count].transform);
-        //eklenecekTas.transform.parent = tailOfChilds[taslar.Count].transform;
         eklenecekTas.transform.localRotation = Quaternion.Euler(Vector3.zero);
 
         taslar.Add(eklenecekTas);

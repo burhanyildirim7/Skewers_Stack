@@ -580,8 +580,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fca559c8d0d29441a1e869182b0c86a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kemikDondurmeKatSayi: 5
-  donuslerArasindakiSayi: 0.00025
+  tailP: {fileID: 7307504017030942817, guid: c1fd551979a37684882df048d483ea6f, type: 3}
+  kemikDondurmeKatSayi: 1
+  donuslerArasindakiSayi: 0.0004
 --- !u!1 &955729541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1347,8 +1348,8 @@ MonoBehaviour:
   totalLevelNo: 0
   levels:
   - {fileID: 3319144378580908708, guid: f0e7c378929b97b4b900394b5405f977, type: 3}
-  - {fileID: 5327193437751063747, guid: 08cac77d61281bd4fbe5be4890b88f53, type: 3}
-  - {fileID: 6356383363625701071, guid: 012b59a71a833e84aa0a83408ef045c4, type: 3}
+  - {fileID: 3319144378580908708, guid: 3f99b55f002263548b5dfee0b12efe3e, type: 3}
+  - {fileID: 3319144378580908708, guid: c3a8afb1018e56d40bc8682fe9538553, type: 3}
 --- !u!1 &664173345876672193
 GameObject:
   m_ObjectHideFlags: 0
@@ -23754,7 +23755,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &5017104762110847694
 MonoBehaviour:
   m_ObjectHideFlags: 0

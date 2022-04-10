@@ -108,7 +108,7 @@ namespace FIMSpace.FTail
         /// <summary>
         /// Initialize component for correct work
         /// </summary>
-        void Awake()
+        void Start()
         {
             if (UpdateAsLast) { enabled = false; enabled = true; }
             if (StartAfterTPose) startAfterTPoseCounter = 6; else Init();

@@ -14,6 +14,8 @@ public class HalkaController : MonoBehaviour
 
     [Header("IpKonumIcinGereklidir")]
     private GameObject tail;
+    private Transform parentOfTail;
+    [SerializeField] private GameObject tailP;
 
     [Header("HalkaOlustururkenYavaslatmaIcinGereklidir")]
     [SerializeField] private int kemikDondurmeKatSayi;
@@ -27,23 +29,45 @@ public class HalkaController : MonoBehaviour
     void Start()
     {
         tasController = GameObject.FindObjectOfType<TasController>();
+        parentOfTail = GameObject.FindWithTag("Player").transform.GetChild(0).transform;
+        tail = GameObject.FindWithTag("Tail");
 
         StartingEvents();
-        StartCoroutine(bekle());
+
     }
 
-    IEnumerator bekle()
+    IEnumerator HalkaRotaBul()
     {
         yield return new WaitForSeconds(.1f);
         hedef1 = GameObject.FindWithTag("Noktalar").transform.GetChild(0).transform.gameObject;
         hedef2 = GameObject.FindWithTag("Noktalar").transform.GetChild(1).transform.gameObject;
         hedef3 = GameObject.FindWithTag("Noktalar").transform.GetChild(2).transform.gameObject;
+
+       
     }
 
     public void StartingEvents()
     {
+        if(tail != null)
+        {
+            Destroy(tail);
+        }
 
-        tail = GameObject.FindWithTag("Tail");
+
+        tail = Instantiate(tailP, parentOfTail.transform.position - Vector3.forward * .5f, Quaternion.identity);
+
+        tail.transform.parent = parentOfTail;
+        tail.transform.localPosition = -Vector3.forward * .5f;
+        tail.transform.localRotation = Quaternion.Euler(Vector3.right * 180);
+
+        StartCoroutine(IpKemikleriniBulBekle());
+        StartCoroutine(HalkaRotaBul());
+    }
+
+    IEnumerator IpKemikleriniBulBekle()
+    {
+        yield return new WaitForSeconds(.1f);
+        tasController.IpKemikleriniBul();
     }
 
 

@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
 
         halkaController = GameObject.FindObjectOfType<HalkaController>();
         tasController = GameObject.FindObjectOfType<TasController>();
+
     }
 
     void Start()
@@ -113,14 +114,25 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     public void StartingEvents()
     {
-        tailAnimator2 = GameObject.FindObjectOfType<TailAnimator2>();
-        tail = GameObject.FindWithTag("Tail");
-        igne = transform.GetChild(0).transform;
+        
+       
         transform.parent.transform.rotation = Quaternion.Euler(0, 0, 0);
         transform.parent.transform.position = Vector3.zero;
         GameController.instance.isContinue = false;
         GameController.instance.score = 0;
         transform.position = new Vector3(0, transform.position.y, 0);
+
+        igne = transform.GetChild(0).transform;
+        StartCoroutine(StartingEventsBekle());
+    }
+
+    IEnumerator StartingEventsBekle()
+    {
+        yield return new WaitForSeconds(.05f);
+        tailAnimator2 = GameObject.FindObjectOfType<TailAnimator2>();
+        tail = GameObject.FindWithTag("Tail");
+        tail.GetComponent<TailAnimator2>().enabled = true;
+
     }
 
 }

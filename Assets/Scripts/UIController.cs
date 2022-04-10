@@ -11,13 +11,18 @@ public class UIController : MonoBehaviour
     public Text gamePlayScoreText, winScreenScoreText, levelNoText, tapToStartScoreText, totalElmasText;
     public Animator ScoreTextAnim;
 
-
+    [Header("Controllerler")]
+    private HalkaController halkaController;
+    private TasController tasController;
 
     // singleton yapisi burada kuruluyor.
     private void Awake()
     {
         if (instance == null) instance = this;
         //else Destroy(this);
+
+        halkaController = GameObject.FindObjectOfType<HalkaController>();
+        tasController = GameObject.FindObjectOfType<TasController>();
     }
 
     private void Start()
@@ -66,6 +71,11 @@ public class UIController : MonoBehaviour
         TapToStartPanel.SetActive(true);
         LevelController.instance.RestartLevelEvents();
         SetTapToStartScoreText();
+
+        //Baslangic ayarlari
+        halkaController.StartingEvents();
+        tasController.StartingEvents();
+        GameController.instance.StartingEvents();
     }
 
 
@@ -78,6 +88,11 @@ public class UIController : MonoBehaviour
         GamePanel.SetActive(false);
         LevelController.instance.NextLevelEvents();
         StartCoroutine(StartScreenCoinEffect());
+
+        //Baslangic ayarlari
+        halkaController.StartingEvents();
+        tasController.StartingEvents();
+        GameController.instance.StartingEvents();
     }
 
 
