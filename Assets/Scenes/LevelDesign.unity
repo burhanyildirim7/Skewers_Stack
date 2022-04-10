@@ -437,7 +437,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 895d44aa4d754ea4297761510221d509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tail: {fileID: 4914503710540713164}
   childsOfTheTail: []
   allChildsTail: []
   taslar: []
@@ -684,6 +683,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kameraMesafeArtirma: {x: 0, y: 1, z: -1}
   kameraPosDegisimSayisi: 2
+  sonTakip1: 0
+  sonTakip2: 0
 --- !u!1 &1124119772
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,6 +717,7 @@ MonoBehaviour:
   score: 0
   elmas: 0
   isContinue: 0
+  isFinished: 0
   isStabbing: 0
 --- !u!4 &1124119774
 Transform:
@@ -731,6 +733,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1603971764}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1198438159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1198438161}
+  - component: {fileID: 1198438160}
+  m_Layer: 0
+  m_Name: Folder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1198438160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198438159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b0f7103e5aae6a48b28d0e1dd07ad07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flattenMode: 0
+  flattenSpace: 0
+  destroyAfterFlatten: 1
+--- !u!4 &1198438161
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198438159}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1443049507
 GameObject:
@@ -863,6 +912,7 @@ MonoBehaviour:
   xVarMi: 1
   collectibleVarMi: 1
   engelCarpmaEfekt: {fileID: 2813930878257660809, guid: 3d1167a3700759147b43d09ef2a7f799, type: 3}
+  efektYuz: {fileID: 0}
 --- !u!54 &1443049515
 Rigidbody:
   m_ObjectHideFlags: 0
