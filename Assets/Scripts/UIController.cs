@@ -14,6 +14,7 @@ public class UIController : MonoBehaviour
     [Header("Controllerler")]
     private HalkaController halkaController;
     private TasController tasController;
+    private CameraMovement cameraMovement;
 
     // singleton yapisi burada kuruluyor.
     private void Awake()
@@ -23,6 +24,7 @@ public class UIController : MonoBehaviour
 
         halkaController = GameObject.FindObjectOfType<HalkaController>();
         tasController = GameObject.FindObjectOfType<TasController>();
+        cameraMovement = GameObject.FindObjectOfType<CameraMovement>();
     }
 
     private void Start()
@@ -76,6 +78,7 @@ public class UIController : MonoBehaviour
         halkaController.StartingEvents();
         tasController.StartingEvents();
         GameController.instance.StartingEvents();
+        cameraMovement.StartingEvents();
     }
 
 
@@ -93,6 +96,7 @@ public class UIController : MonoBehaviour
         halkaController.StartingEvents();
         tasController.StartingEvents();
         GameController.instance.StartingEvents();
+        cameraMovement.StartingEvents();
     }
 
 

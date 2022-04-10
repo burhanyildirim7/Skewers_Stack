@@ -6,6 +6,7 @@ public class HalkaController : MonoBehaviour
 {
     [Header("Controllerler")]
     private TasController tasController;
+    private CameraMovement cameraMovement;
 
     [Header("Eksenler")]
     private float eksenX;
@@ -21,6 +22,8 @@ public class HalkaController : MonoBehaviour
     [SerializeField] private int kemikDondurmeKatSayi;
     [SerializeField] private float donuslerArasindakiSayi;
 
+
+
     private GameObject hedef1;
     private GameObject hedef2;
     private GameObject hedef3;
@@ -29,11 +32,13 @@ public class HalkaController : MonoBehaviour
     void Start()
     {
         tasController = GameObject.FindObjectOfType<TasController>();
+        cameraMovement = GameObject.FindObjectOfType<CameraMovement>();
+
         parentOfTail = GameObject.FindWithTag("Player").transform.GetChild(0).transform;
         tail = GameObject.FindWithTag("Tail");
+        
 
         StartingEvents();
-
     }
 
     IEnumerator HalkaRotaBul()
@@ -80,7 +85,9 @@ public class HalkaController : MonoBehaviour
 
     IEnumerator IpiDondur()
     {
-        tail.transform.position += Vector3.forward * 20;
+        StartCoroutine(Hedef1Git());
+
+
         for (int i = 0; i < tasController.allChildsTail.Count * kemikDondurmeKatSayi; i++)
         {
             tasController.allChildsTail[i % 181].transform.localRotation = Quaternion.Euler(Vector3.up * 2 / kemikDondurmeKatSayi * ((int)(i / 181) + 1));
@@ -89,12 +96,8 @@ public class HalkaController : MonoBehaviour
             {
                 tasController.allChildsTail[i].transform.localPosition += Vector3.right * eksenX;
             }
-
-
             yield return new WaitForSeconds(donuslerArasindakiSayi);
         }
-
-        //StartCoroutine(Hedef1Git());
     }
 
     IEnumerator Hedef1Git()
@@ -136,6 +139,7 @@ public class HalkaController : MonoBehaviour
 
     IEnumerator Hedef3Git()
     {
+        cameraMovement.sonTakip2 = true;
         while (true)
         {
             if (Vector3.Distance(tail.transform.position, hedef3.transform.position) >= .05f)

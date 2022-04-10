@@ -17,6 +17,7 @@ TagManager:
   - IgneNokta
   - Tail
   - Noktalar
+  - OyunSonuEfekt
   layers:
   - Default
   - TransparentFX

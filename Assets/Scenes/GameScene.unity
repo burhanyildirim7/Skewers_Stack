@@ -437,7 +437,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 895d44aa4d754ea4297761510221d509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tail: {fileID: 4914503710540713164}
   childsOfTheTail: []
   allChildsTail: []
   taslar: []
@@ -582,7 +581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tailP: {fileID: 7307504017030942817, guid: c1fd551979a37684882df048d483ea6f, type: 3}
   kemikDondurmeKatSayi: 1
-  donuslerArasindakiSayi: 0.0004
+  donuslerArasindakiSayi: 0.0135
 --- !u!1 &955729541
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,7 +739,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kameraMesafeArtirma: {x: 0, y: 0.8, z: -0.975}
   kameraPosDegisimSayisi: 4
-  sonTakip: 0
+  sonTakip1: 0
+  sonTakip2: 0
 --- !u!1 &1124119772
 GameObject:
   m_ObjectHideFlags: 0
@@ -1347,9 +1347,9 @@ MonoBehaviour:
   tempLevelNo: 0
   totalLevelNo: 0
   levels:
-  - {fileID: 3319144378580908708, guid: f0e7c378929b97b4b900394b5405f977, type: 3}
-  - {fileID: 3319144378580908708, guid: 3f99b55f002263548b5dfee0b12efe3e, type: 3}
-  - {fileID: 3319144378580908708, guid: c3a8afb1018e56d40bc8682fe9538553, type: 3}
+  - {fileID: 3319144378580908708, guid: e10bfe338c2f0914496a04761560f406, type: 3}
+  - {fileID: 3319144378580908708, guid: e10bfe338c2f0914496a04761560f406, type: 3}
+  - {fileID: 3319144378580908708, guid: e10bfe338c2f0914496a04761560f406, type: 3}
 --- !u!1 &664173345876672193
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Controllerler")]
     private HalkaController halkaController;
+    private CameraMovement cameraMovement;
 
 
     [Header("TailIslemleri")]
@@ -38,7 +39,7 @@ public class PlayerController : MonoBehaviour
 
         halkaController = GameObject.FindObjectOfType<HalkaController>();
         tasController = GameObject.FindObjectOfType<TasController>();
-
+        cameraMovement = GameObject.FindObjectOfType<CameraMovement>();
     }
 
     void Start()
@@ -96,15 +97,17 @@ public class PlayerController : MonoBehaviour
             
             tailAnimator2.TailAnimatorAmount = .01f;
             StartCoroutine(Bekle());
-            
+            cameraMovement.sonTakip1 = true;
+
+            GameObject.FindWithTag("OyunSonuEfekt").GetComponent<ParticleSystem>().Play();
         }
     }
 
     private IEnumerator Bekle()
     {
         yield return new WaitForSeconds(.05f);
-        tail.transform.position = transform.position + Vector3.forward * 5;
-        tail.transform.rotation = Quaternion.Euler(Vector3.up * 90 - Vector3.forward * 90);
+       // tail.transform.position = transform.position + Vector3.forward * 5;
+     //   tail.transform.rotation = Quaternion.Euler(Vector3.up * 90 - Vector3.forward * 90);
         tail.GetComponent<TailAnimator2>().enabled = false;
         halkaController.FinishingEvents();
     }
