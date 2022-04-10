@@ -580,6 +580,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fca559c8d0d29441a1e869182b0c86a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kemikDondurmeKatSayi: 5
+  donuslerArasindakiSayi: 0.00025
 --- !u!1 &955729541
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,6 +739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kameraMesafeArtirma: {x: 0, y: 0.8, z: -0.975}
   kameraPosDegisimSayisi: 4
+  sonTakip: 0
 --- !u!1 &1124119772
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,6 +920,7 @@ MonoBehaviour:
   xVarMi: 1
   collectibleVarMi: 1
   engelCarpmaEfekt: {fileID: 2813930878257660809, guid: 3d1167a3700759147b43d09ef2a7f799, type: 3}
+  efektYuz: {fileID: 3301476379107891724, guid: cf707f4c996d0c14a94c3eab2d62b0fc, type: 3}
 --- !u!54 &1443049515
 Rigidbody:
   m_ObjectHideFlags: 0

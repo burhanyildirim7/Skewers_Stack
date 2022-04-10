@@ -124,7 +124,7 @@ public class UIController : MonoBehaviour
 
     private IEnumerator ActiveWinScreenDelay()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(5f);
         GamePanel.SetActive(false);
         StartCoroutine(WinScreenDelay());
     }

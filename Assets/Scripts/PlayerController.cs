@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Efekt")]
     [SerializeField] private ParticleSystem engelCarpmaEfekt;
+    [SerializeField] private ParticleSystem efektYuz;
     private Transform igne;
 
     [Header("Controllerler")]
@@ -26,6 +27,8 @@ public class PlayerController : MonoBehaviour
     [Header("TailIslemleri")]
     private GameObject tail;
     private TailAnimator2 tailAnimator2;
+
+    
 
 
     private void Awake()
@@ -56,6 +59,8 @@ public class PlayerController : MonoBehaviour
             GameController.instance.SetScore(collectibleDegeri); // ORNEK KULLANIM detaylar icin ctrl+click yapip fonksiyon aciklamasini oku
             tasController.TasEkle(other.gameObject);
             other.transform.gameObject.tag = "Untagged";
+
+            Instantiate(efektYuz, transform.GetChild(0).transform.position + Vector3.forward * 1.75f + Vector3.right * .8f, Quaternion.identity);
 
         }
         else if (other.CompareTag("engel"))
