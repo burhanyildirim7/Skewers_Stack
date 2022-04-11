@@ -146,7 +146,7 @@ public class HalkaController : MonoBehaviour
             {
                 tail.transform.position = Vector3.MoveTowards(tail.transform.position, hedef.transform.position, Time.deltaTime * 5);
                 tail.transform.rotation = Quaternion.Slerp(tail.transform.rotation, hedef.transform.rotation, Time.deltaTime * 2);
-                tail.transform.localScale = Vector3.MoveTowards(tail.transform.localScale, hedef.transform.lossyScale, Time.deltaTime * 1.75f);
+                tail.transform.localScale = Vector3.MoveTowards(tail.transform.localScale, hedef.transform.lossyScale, Time.deltaTime * 1.06f);
             }
             else
             {

@@ -16,11 +16,28 @@ public class IgneMovement : MonoBehaviour
 
     [Header("OyunIciModlar")]
     private bool saplamaModu;
-
+  
     void Start()
+    {
+        StartingEvents();
+    }
+
+    public void StartingEvents()
     {
         anim.Play("Sallanma");
         saplamaModu = false;
+
+        StartCoroutine(OyunSonuKontrol());
+    }
+
+    IEnumerator OyunSonuKontrol()
+    {
+        while(GameController.instance.isContinue)
+        {
+
+            anim.Stop();
+            yield return new WaitForSeconds(.2f);
+        }
     }
 
     // Update is called once per frame
@@ -29,14 +46,18 @@ public class IgneMovement : MonoBehaviour
         if(Input.GetMouseButtonDown(0) && GameController.instance.isContinue && !saplamaModu)
         {
             lastTouchPoint = Input.mousePosition;
-            saplamaModu = true;
+            saplamaModu = true; 
         }
 
         if (Input.GetMouseButtonUp(0) && GameController.instance.isContinue && saplamaModu)
         {
-            if(Input.mousePosition.y >= lastTouchPoint.y + 20)
+            saplamaModu = false;
+            if (Input.mousePosition.y >= lastTouchPoint.y + 20)
             {
-                if(Input.mousePosition.x >= lastTouchPoint.x)
+                StopCoroutine(IgneSaplamaDurdur());
+                StopCoroutine(IgneyiSapla());
+
+                if (Input.mousePosition.x >= lastTouchPoint.x)
                 {
                     aci = Vector3.Angle(Input.mousePosition - lastTouchPoint, transform.up);
                     StartCoroutine(IgneyiSapla());
@@ -49,7 +70,7 @@ public class IgneMovement : MonoBehaviour
                     StartCoroutine(IgneSaplamaDurdur());
                 }
             }
-            saplamaModu = false;
+          
         }
     }
 
@@ -63,25 +84,32 @@ public class IgneMovement : MonoBehaviour
         GameController.instance.isStabbing = true;
         while(GameController.instance.isStabbing)
         {
-            igne.transform.rotation = Quaternion.Slerp(igne.transform.rotation, Quaternion.Euler(Vector3.up * aci), Time.deltaTime * 20f);
+            igne.transform.rotation = Quaternion.Slerp(igne.transform.rotation, Quaternion.Euler(Vector3.up * aci), Time.deltaTime * 25f);
+            if(saplamaModu)
+            {
+                break;
+            }
             yield return null;
         }
-       
     }
 
     private IEnumerator IgneSaplamaDurdur()
     {
         yield return new WaitForSeconds(1f);
+        if (saplamaModu)
+        {
+            StopCoroutine(IgneSaplamaDurdur());
+        }
         anim.Play("Sallanma");
         GameController.instance.isStabbing = false;
         while (igne.transform.rotation.eulerAngles.y >= 1)
         {
-            igne.transform.rotation = Quaternion.Slerp(igne.transform.rotation, Quaternion.Euler(Vector3.zero), Time.deltaTime * 75f);
+            igne.transform.rotation = Quaternion.Slerp(igne.transform.rotation, Quaternion.Euler(Vector3.zero), Time.deltaTime * 100f);
+            if (saplamaModu)
+            {
+                break;
+            }
             yield return null;
         }
-        
-
     }
-
-   
 }

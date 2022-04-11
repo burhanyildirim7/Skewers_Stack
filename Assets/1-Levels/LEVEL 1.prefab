@@ -39297,7 +39297,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3751133752216706193}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.02, y: 2.08, z: 266.9}
+  m_LocalPosition: {x: 0.02, y: 2.93, z: 250.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -44301,7 +44301,7 @@ Transform:
   - {fileID: 3052769775367506672}
   - {fileID: 2285657605070419369}
   m_Father: {fileID: 6618298228085240080}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4114792309445661066
 GameObject:
@@ -49665,7 +49665,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6428761878359115434}
   m_LocalRotation: {x: 0.7071068, y: -0, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 0, y: 12.2, z: 248.8}
+  m_LocalPosition: {x: 0, y: 10.08, z: 247.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -49936,7 +49936,6 @@ Transform:
   - {fileID: 6363790136547219948}
   - {fileID: 1346176804448564807}
   - {fileID: 4752777836826090821}
-  - {fileID: 8934401909390532143}
   - {fileID: 7686960305595132387}
   - {fileID: 5769000019088278995}
   - {fileID: 7992795564585682884}
@@ -54904,103 +54903,6 @@ Transform:
   m_Father: {fileID: 1726944105611308388}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6726211950772419080
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8934401909390532143}
-  - component: {fileID: 9123803803741858289}
-  - component: {fileID: 8868318844650341315}
-  - component: {fileID: 7971694014352816980}
-  m_Layer: 0
-  m_Name: Platform
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8934401909390532143
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6726211950772419080}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.67, z: 267.16}
-  m_LocalScale: {x: 5.331, y: 5.331, z: 5.331}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6618298228085240080}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &9123803803741858289
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6726211950772419080}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &8868318844650341315
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6726211950772419080}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 497bd386873e3ff4f976f8082040afc9, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7971694014352816980
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6726211950772419080}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6854557802065435574
 GameObject:
   m_ObjectHideFlags: 0
@@ -60159,7 +60061,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7756988439855011631}
   m_LocalRotation: {x: 0.6830127, y: -0.18301274, z: 0.6830127, w: -0.18301274}
-  m_LocalPosition: {x: 0, y: 3.5, z: 244.9}
+  m_LocalPosition: {x: 0.57566756, y: 6.02, z: 238.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -79561,7 +79463,7 @@ Transform:
   - {fileID: 685162324195866494}
   - {fileID: 8486910979035369040}
   m_Father: {fileID: 6618298228085240080}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8661386719750203721
 GameObject:
@@ -79690,7 +79592,7 @@ Transform:
   - {fileID: 8511773383550177643}
   - {fileID: 6997750214029475007}
   m_Father: {fileID: 6618298228085240080}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9208492027860311178
 GameObject:
@@ -79786,6 +79688,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 5292980579661120035, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
 --- !u!4 &189957146408361630 stripped
@@ -79856,6 +79762,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 8869825643984391249, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
 --- !u!4 &568353100090760349 stripped
@@ -80000,6 +79910,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 7762592810355741603, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
 --- !u!4 &1717979557582027346 stripped
@@ -80280,6 +80194,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 5292980579661120035, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     - target: {fileID: 8371330719456820816, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
       propertyPath: m_Constraints
       value: 4
@@ -80490,6 +80408,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 8869825643984391249, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
 --- !u!4 &6613978674327519545 stripped
@@ -80564,6 +80486,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 7514174567035050775, guid: 3468aaf93e40c4920924867f04931a46, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3468aaf93e40c4920924867f04931a46, type: 3}
 --- !u!4 &6617676476446869917 stripped
@@ -80712,6 +80638,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 7514174567035050775, guid: 3468aaf93e40c4920924867f04931a46, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3468aaf93e40c4920924867f04931a46, type: 3}
 --- !u!4 &6617676476737096453 stripped
@@ -80782,6 +80712,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 5292980579661120035, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     - target: {fileID: 8371330719456820816, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
       propertyPath: m_Constraints
       value: 4
@@ -80856,6 +80790,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 7762592810355741603, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
 --- !u!4 &6613996187939584031 stripped
@@ -80926,6 +80864,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 5292980579661120035, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
 --- !u!4 &6617478279592142295 stripped
@@ -81120,6 +81062,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 8869825643984391249, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
 --- !u!4 &6613978674587410778 stripped
@@ -81190,6 +81136,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 5292980579661120035, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     - target: {fileID: 8371330719456820816, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
       propertyPath: m_Constraints
       value: 4
@@ -81268,6 +81218,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 8869825643984391249, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
 --- !u!4 &6613978674484881774 stripped
@@ -81400,6 +81354,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 7762592810355741603, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
 --- !u!4 &6613996189370480377 stripped
@@ -81470,6 +81428,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 5292980579661120035, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
 --- !u!4 &6617478280294284985 stripped
@@ -81540,6 +81502,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 7762592810355741603, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
 --- !u!4 &6613996189546270088 stripped
@@ -81610,6 +81576,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 7762592810355741603, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     - target: {fileID: 7802047398012147022, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
       propertyPath: m_Constraints
       value: 4
@@ -81746,6 +81716,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 7514174567035050775, guid: 3468aaf93e40c4920924867f04931a46, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3468aaf93e40c4920924867f04931a46, type: 3}
 --- !u!4 &6617676477633218576 stripped
@@ -81816,6 +81790,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 8869825643984391249, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
 --- !u!4 &6613978673030199225 stripped
@@ -81886,6 +81864,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 8869825643984391249, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
 --- !u!4 &6613978672984629213 stripped
@@ -81956,6 +81938,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 8869825643984391249, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
 --- !u!4 &6613978672864085800 stripped
@@ -82026,6 +82012,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 5292980579661120035, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
 --- !u!4 &6617478279862580566 stripped
@@ -82096,6 +82086,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 5292980579661120035, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
 --- !u!4 &6617478280850030318 stripped
@@ -82166,6 +82160,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 5292980579661120035, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
 --- !u!4 &6617478280811374028 stripped
@@ -82236,6 +82234,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 8869825643984391249, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
 --- !u!4 &6613978673844632151 stripped
@@ -82306,6 +82308,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 7762592810355741603, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
 --- !u!4 &6613996188827308145 stripped
@@ -82376,6 +82382,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 7514174567035050775, guid: 3468aaf93e40c4920924867f04931a46, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3468aaf93e40c4920924867f04931a46, type: 3}
 --- !u!4 &6617676478287010113 stripped
@@ -82446,6 +82456,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 7762592810355741603, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
 --- !u!4 &6613996188778676840 stripped
@@ -82516,6 +82530,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 7762592810355741603, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
 --- !u!4 &6613996188965496336 stripped
@@ -82586,6 +82604,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 8869825643984391249, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
 --- !u!4 &6613978673526681665 stripped
@@ -82730,6 +82752,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 7762592810355741603, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
 --- !u!4 &8353696643599814315 stripped
@@ -82800,6 +82826,10 @@ PrefabInstance:
       propertyPath: efekt
       value: 
       objectReference: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+    - target: {fileID: 8869825643984391249, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
+      propertyPath: efektDusme
+      value: 
+      objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
 --- !u!4 &8521151796332623517 stripped

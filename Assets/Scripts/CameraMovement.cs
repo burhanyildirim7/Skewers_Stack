@@ -37,6 +37,7 @@ public class CameraMovement : MonoBehaviour
 
     public void StartingEvents()
     {
+        transform.rotation = Quaternion.Euler(Vector3.right * 34.19f);
         sonTakip1 = false;
         sonTakip2 = false;
         StartCoroutine(Bekle());
@@ -55,7 +56,7 @@ public class CameraMovement : MonoBehaviour
         {
             if(sonTakip2)
             {
-                transform.position = Vector3.Lerp(transform.position, tail.transform.position + Vector3.up * .6f - Vector3.forward * 2, Time.deltaTime * 2f);
+                transform.position = Vector3.Lerp(transform.position, tail.transform.position + Vector3.up * 4.5f - Vector3.forward * 11, Time.deltaTime * 1f);
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(Vector3.right * 15), Time.deltaTime * 150);
             }
             else

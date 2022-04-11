@@ -17,7 +17,8 @@ public class PlayerController : MonoBehaviour
 
     [Header("Efekt")]
     [SerializeField] private ParticleSystem engelCarpmaEfekt;
-    [SerializeField] private ParticleSystem efektYuz;
+    [SerializeField] private GameObject efektArti;
+    [SerializeField] private GameObject efektEksi;
     private Transform igne;
 
     [Header("Controllerler")]
@@ -62,8 +63,8 @@ public class PlayerController : MonoBehaviour
             tasController.TasEkle(other.gameObject);
             other.transform.gameObject.tag = "Untagged";
 
-            Instantiate(efektYuz, transform.GetChild(0).transform.position + Vector3.forward * 1.75f + Vector3.right * .8f, Quaternion.identity);
-
+            GameObject obje = Instantiate(efektArti, transform.GetChild(0).transform.position + Vector3.forward * 1.75f + Vector3.right * .8f, Quaternion.identity);
+            Destroy(obje, 2f);
         }
         else if (other.CompareTag("engel"))
         {
@@ -80,7 +81,11 @@ public class PlayerController : MonoBehaviour
             tasController.TasDusur(1);
             other.transform.gameObject.tag = "Untagged"; //Bir engelin bir tane tas dururebilmesi icindir
 
+
             Instantiate(engelCarpmaEfekt, igne.transform.position + igne.transform.forward * transform.localScale.z / 2, Quaternion.Euler(Vector3.up * transform.rotation.eulerAngles.y + Vector3.up * 180));
+
+            GameObject obje = Instantiate(efektEksi, transform.GetChild(0).transform.position + Vector3.forward * 1.75f + Vector3.right * .8f, Quaternion.identity);
+            Destroy(obje, 2f);
         }
         else if (other.CompareTag("finish"))
         {

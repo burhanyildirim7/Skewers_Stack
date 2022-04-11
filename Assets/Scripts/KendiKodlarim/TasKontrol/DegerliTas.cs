@@ -12,6 +12,7 @@ public class DegerliTas : MonoBehaviour
 
     [Header("Efekt")]
     [SerializeField] private ParticleSystem efekt;
+    [SerializeField] private ParticleSystem efektDusme;
 
     [Header("Controllerler")]
     private TasController tasController;
@@ -23,7 +24,7 @@ public class DegerliTas : MonoBehaviour
     private int childSayisi;
 
     [Header("Animasyon")]
-    private Animation anim;
+    private Animator anim;
 
     private WaitForSeconds sonTarafBekleme = new WaitForSeconds(.05f);
     void Start()
@@ -38,7 +39,7 @@ public class DegerliTas : MonoBehaviour
         collider = GetComponent<BoxCollider>();
         tasController = GameObject.FindObjectOfType<TasController>();
         noktalar = GameObject.FindGameObjectsWithTag("IgneNokta");
-        anim = GetComponent<Animation>();
+        anim = GetComponent<Animator>();
     }
 
     public void TasiDusur()
@@ -49,6 +50,13 @@ public class DegerliTas : MonoBehaviour
         transform.parent = null;
         toplandiMi = false;
         transform.parent = null;
+
+
+        ParticleSystem dEfekt = Instantiate(efektDusme, transform.position, Quaternion.identity);
+        dEfekt.Play();
+
+
+        Destroy(this);
     }
 
     public void TasEklemeProcces(int sayi)
@@ -59,7 +67,7 @@ public class DegerliTas : MonoBehaviour
         childSayisi = sayi;
         StartCoroutine(SonTarafIcinBekle());
 
-        anim.Stop();
+        anim.enabled = false;
     }
 
     IEnumerator SonTarafIcinBekle()
