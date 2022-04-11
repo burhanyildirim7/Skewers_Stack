@@ -22,12 +22,13 @@ public class DegerliTas : MonoBehaviour
     [Header("SonTarafIcinGerekliOlanlar")]
     private int childSayisi;
 
+    [Header("Animasyon")]
+    private Animation anim;
+
     private WaitForSeconds sonTarafBekleme = new WaitForSeconds(.05f);
     void Start()
     {
         StartingEvents();
-
-
     }
 
     private void StartingEvents()
@@ -37,6 +38,7 @@ public class DegerliTas : MonoBehaviour
         collider = GetComponent<BoxCollider>();
         tasController = GameObject.FindObjectOfType<TasController>();
         noktalar = GameObject.FindGameObjectsWithTag("IgneNokta");
+        anim = GetComponent<Animation>();
     }
 
     public void TasiDusur()
@@ -56,6 +58,8 @@ public class DegerliTas : MonoBehaviour
         toplandiMi = true;
         childSayisi = sayi;
         StartCoroutine(SonTarafIcinBekle());
+
+        anim.Stop();
     }
 
     IEnumerator SonTarafIcinBekle()
