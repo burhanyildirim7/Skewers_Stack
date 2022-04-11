@@ -41,9 +41,9 @@ public class HalkaController : MonoBehaviour
         StartingEvents();
     }
 
-    IEnumerator HalkaRotaBul()
+    IEnumerator HalkaRotaBul() //Oyun sonunda rastgele olarak yapýlacak aksesuar icin rota belirlenir
     {
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(2f);
         hedef1 = GameObject.FindWithTag("Noktalar").transform.GetChild(0).transform.gameObject;
         hedef2 = GameObject.FindWithTag("Noktalar").transform.GetChild(1).transform.gameObject;
         hedef = GameObject.FindWithTag("Hedef");

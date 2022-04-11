@@ -17,7 +17,7 @@ public class DegerliTas : MonoBehaviour
     private TasController tasController;
 
     [Header("Noktalar")]
-    public GameObject[] noktalar;
+    GameObject[] noktalar;
 
     [Header("SonTarafIcinGerekliOlanlar")]
     private int childSayisi;
@@ -75,9 +75,9 @@ public class DegerliTas : MonoBehaviour
 
     IEnumerator BoyutBuyult()
     {
-       while(transform.localScale.y <= 1)
+       while(transform.localScale.y <= 1.15f)
         {
-            transform.localScale = Vector3.Lerp(transform.localScale, Vector3.one , Time.deltaTime * 1);
+            transform.localScale = Vector3.Lerp(transform.localScale, Vector3.one , Time.deltaTime * 1.15f);
             yield return null;
         }
     }
