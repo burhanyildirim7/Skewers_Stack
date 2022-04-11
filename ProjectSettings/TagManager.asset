@@ -19,6 +19,7 @@ TagManager:
   - Noktalar
   - OyunSonuEfekt
   - Hedef
+  - Balon
   layers:
   - Default
   - TransparentFX

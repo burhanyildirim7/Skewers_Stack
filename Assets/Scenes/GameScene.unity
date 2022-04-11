@@ -923,6 +923,7 @@ MonoBehaviour:
   engelCarpmaEfekt: {fileID: 2813930878257660809, guid: 3d1167a3700759147b43d09ef2a7f799, type: 3}
   efektArti: {fileID: 739564594356575838, guid: b85f4e27363babb4f910afe95009e2d9, type: 3}
   efektEksi: {fileID: 5612696266486090017, guid: 58f0ece1bf4709a44bd764dc4642ec36, type: 3}
+  efektBalon: {fileID: 2895195331479066992, guid: 81aa304447b83354095933119626dfe1, type: 3}
 --- !u!54 &1443049515
 Rigidbody:
   m_ObjectHideFlags: 0
