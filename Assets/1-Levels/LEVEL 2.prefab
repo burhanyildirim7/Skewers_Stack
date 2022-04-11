@@ -41292,6 +41292,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pink_BunnyBalloon
       objectReference: {fileID: 0}
+    - target: {fileID: 187184, guid: 0570da5343f6749a392ffcd4a60f7156, type: 3}
+      propertyPath: m_TagString
+      value: Balon
+      objectReference: {fileID: 0}
     - target: {fileID: 437106, guid: 0570da5343f6749a392ffcd4a60f7156, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -41347,6 +41351,10 @@ PrefabInstance:
     - target: {fileID: 437106, guid: 0570da5343f6749a392ffcd4a60f7156, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683472599699204109, guid: 0570da5343f6749a392ffcd4a60f7156, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0570da5343f6749a392ffcd4a60f7156, type: 3}
@@ -41526,6 +41534,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue_Balloon-Flying (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 167766, guid: e064135849b634ece9a312b361e1d5e2, type: 3}
+      propertyPath: m_TagString
+      value: Balon
+      objectReference: {fileID: 0}
     - target: {fileID: 478670, guid: e064135849b634ece9a312b361e1d5e2, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -41582,6 +41594,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1530788103581063386, guid: e064135849b634ece9a312b361e1d5e2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e064135849b634ece9a312b361e1d5e2, type: 3}
 --- !u!4 &1635860743041479398 stripped
@@ -41599,6 +41615,10 @@ PrefabInstance:
     - target: {fileID: 152424, guid: 026c9954284244abc8f2cb2391a8f132, type: 3}
       propertyPath: m_Name
       value: Green_Balloon
+      objectReference: {fileID: 0}
+    - target: {fileID: 152424, guid: 026c9954284244abc8f2cb2391a8f132, type: 3}
+      propertyPath: m_TagString
+      value: Balon
       objectReference: {fileID: 0}
     - target: {fileID: 467176, guid: 026c9954284244abc8f2cb2391a8f132, type: 3}
       propertyPath: m_RootOrder
@@ -41655,6 +41675,10 @@ PrefabInstance:
     - target: {fileID: 467176, guid: 026c9954284244abc8f2cb2391a8f132, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828061930252829891, guid: 026c9954284244abc8f2cb2391a8f132, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 026c9954284244abc8f2cb2391a8f132, type: 3}
@@ -41998,6 +42022,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue_Balloon-Flying
       objectReference: {fileID: 0}
+    - target: {fileID: 167766, guid: e064135849b634ece9a312b361e1d5e2, type: 3}
+      propertyPath: m_TagString
+      value: Balon
+      objectReference: {fileID: 0}
     - target: {fileID: 478670, guid: e064135849b634ece9a312b361e1d5e2, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -42053,6 +42081,10 @@ PrefabInstance:
     - target: {fileID: 478670, guid: e064135849b634ece9a312b361e1d5e2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1530788103581063386, guid: e064135849b634ece9a312b361e1d5e2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e064135849b634ece9a312b361e1d5e2, type: 3}
@@ -42170,6 +42202,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue_Balloon-Flying (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 167766, guid: e064135849b634ece9a312b361e1d5e2, type: 3}
+      propertyPath: m_TagString
+      value: Balon
+      objectReference: {fileID: 0}
     - target: {fileID: 478670, guid: e064135849b634ece9a312b361e1d5e2, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -42225,6 +42261,10 @@ PrefabInstance:
     - target: {fileID: 478670, guid: e064135849b634ece9a312b361e1d5e2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1530788103581063386, guid: e064135849b634ece9a312b361e1d5e2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e064135849b634ece9a312b361e1d5e2, type: 3}
@@ -43104,6 +43144,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Green_Balloon (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 152424, guid: 026c9954284244abc8f2cb2391a8f132, type: 3}
+      propertyPath: m_TagString
+      value: Balon
+      objectReference: {fileID: 0}
     - target: {fileID: 467176, guid: 026c9954284244abc8f2cb2391a8f132, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -43159,6 +43203,10 @@ PrefabInstance:
     - target: {fileID: 467176, guid: 026c9954284244abc8f2cb2391a8f132, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828061930252829891, guid: 026c9954284244abc8f2cb2391a8f132, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 026c9954284244abc8f2cb2391a8f132, type: 3}
@@ -43276,6 +43324,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red_Balloon
       objectReference: {fileID: 0}
+    - target: {fileID: 119052, guid: a1a9551ad9ce4441295ef97527964b58, type: 3}
+      propertyPath: m_TagString
+      value: Balon
+      objectReference: {fileID: 0}
     - target: {fileID: 425556, guid: a1a9551ad9ce4441295ef97527964b58, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -43331,6 +43383,10 @@ PrefabInstance:
     - target: {fileID: 425556, guid: a1a9551ad9ce4441295ef97527964b58, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 197357868048777960, guid: a1a9551ad9ce4441295ef97527964b58, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1a9551ad9ce4441295ef97527964b58, type: 3}

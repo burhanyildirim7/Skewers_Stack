@@ -93,6 +93,12 @@ public class PlayerController : MonoBehaviour
         }
         else if(other.CompareTag("Balon"))
         {
+            tasController.TasDusur(1);
+
+
+            GameObject obje = Instantiate(efektEksi, transform.GetChild(0).transform.position + Vector3.forward * 1.75f + Vector3.right * .8f, Quaternion.identity);
+            Destroy(obje, 2f);
+
             Instantiate(efektBalon, other.transform.position + Vector3.up * 2.25f, Quaternion.identity);
             Destroy(other.gameObject);
 

@@ -41244,6 +41244,14 @@ PrefabInstance:
       propertyPath: efektDusme
       value: 
       objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
+    - target: {fileID: 8371330719456820816, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8371330719456820816, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
 --- !u!4 &189957146408361630 stripped
@@ -41310,6 +41318,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 050fe89a0651e90458b82b5493ddc35f, type: 2}
+    - target: {fileID: 8811768991628782442, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811768991628782442, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8869825643984391249, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
       propertyPath: efekt
       value: 
@@ -41474,6 +41490,14 @@ PrefabInstance:
       propertyPath: efektDusme
       value: 
       objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
+    - target: {fileID: 7802047398012147022, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802047398012147022, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
 --- !u!4 &1717979557582027346 stripped
@@ -41775,8 +41799,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     - target: {fileID: 8371330719456820816, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8371330719456820816, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
       propertyPath: m_Constraints
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
@@ -41988,6 +42016,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 050fe89a0651e90458b82b5493ddc35f, type: 2}
+    - target: {fileID: 8811768991628782442, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811768991628782442, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8869825643984391249, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
       propertyPath: efekt
       value: 
@@ -42063,8 +42099,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 3d1f3fcf0e2274849bcc3966310d5731, type: 2}
     - target: {fileID: 5670215618783067777, guid: 3468aaf93e40c4920924867f04931a46, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5670215618783067777, guid: 3468aaf93e40c4920924867f04931a46, type: 3}
       propertyPath: m_Constraints
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7514174567035050775, guid: 3468aaf93e40c4920924867f04931a46, type: 3}
       propertyPath: efekt
@@ -42218,6 +42258,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3d1f3fcf0e2274849bcc3966310d5731, type: 2}
+    - target: {fileID: 5670215618783067777, guid: 3468aaf93e40c4920924867f04931a46, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5670215618783067777, guid: 3468aaf93e40c4920924867f04931a46, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7514174567035050775, guid: 3468aaf93e40c4920924867f04931a46, type: 3}
       propertyPath: efekt
       value: 
@@ -42301,8 +42349,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     - target: {fileID: 8371330719456820816, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8371330719456820816, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
       propertyPath: m_Constraints
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
@@ -42378,6 +42430,14 @@ PrefabInstance:
       propertyPath: efektDusme
       value: 
       objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
+    - target: {fileID: 7802047398012147022, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802047398012147022, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
 --- !u!4 &6613996187939584031 stripped
@@ -42452,6 +42512,14 @@ PrefabInstance:
       propertyPath: efektDusme
       value: 
       objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
+    - target: {fileID: 8371330719456820816, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8371330719456820816, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
 --- !u!4 &6617478279592142295 stripped
@@ -42642,6 +42710,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 050fe89a0651e90458b82b5493ddc35f, type: 2}
+    - target: {fileID: 8811768991628782442, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811768991628782442, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8869825643984391249, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
       propertyPath: efekt
       value: 
@@ -42725,8 +42801,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     - target: {fileID: 8371330719456820816, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8371330719456820816, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
       propertyPath: m_Constraints
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
@@ -42795,8 +42875,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 050fe89a0651e90458b82b5493ddc35f, type: 2}
     - target: {fileID: 8811768991628782442, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811768991628782442, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
       propertyPath: m_Constraints
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8869825643984391249, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
       propertyPath: efekt
@@ -42942,6 +43026,14 @@ PrefabInstance:
       propertyPath: efektDusme
       value: 
       objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
+    - target: {fileID: 7802047398012147022, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802047398012147022, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
 --- !u!4 &6613996189370480377 stripped
@@ -43016,6 +43108,14 @@ PrefabInstance:
       propertyPath: efektDusme
       value: 
       objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
+    - target: {fileID: 8371330719456820816, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8371330719456820816, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
 --- !u!4 &6617478280294284985 stripped
@@ -43090,6 +43190,14 @@ PrefabInstance:
       propertyPath: efektDusme
       value: 
       objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
+    - target: {fileID: 7802047398012147022, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802047398012147022, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
 --- !u!4 &6613996189546270088 stripped
@@ -43165,8 +43273,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
     - target: {fileID: 7802047398012147022, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802047398012147022, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
       propertyPath: m_Constraints
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
@@ -43296,6 +43408,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3d1f3fcf0e2274849bcc3966310d5731, type: 2}
+    - target: {fileID: 5670215618783067777, guid: 3468aaf93e40c4920924867f04931a46, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5670215618783067777, guid: 3468aaf93e40c4920924867f04931a46, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7514174567035050775, guid: 3468aaf93e40c4920924867f04931a46, type: 3}
       propertyPath: efekt
       value: 
@@ -43370,6 +43490,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 050fe89a0651e90458b82b5493ddc35f, type: 2}
+    - target: {fileID: 8811768991628782442, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811768991628782442, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8869825643984391249, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
       propertyPath: efekt
       value: 
@@ -43444,6 +43572,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 050fe89a0651e90458b82b5493ddc35f, type: 2}
+    - target: {fileID: 8811768991628782442, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811768991628782442, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8869825643984391249, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
       propertyPath: efekt
       value: 
@@ -43518,6 +43654,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 050fe89a0651e90458b82b5493ddc35f, type: 2}
+    - target: {fileID: 8811768991628782442, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811768991628782442, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8869825643984391249, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
       propertyPath: efekt
       value: 
@@ -43600,6 +43744,14 @@ PrefabInstance:
       propertyPath: efektDusme
       value: 
       objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
+    - target: {fileID: 8371330719456820816, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8371330719456820816, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
 --- !u!4 &6617478279862580566 stripped
@@ -43674,6 +43826,14 @@ PrefabInstance:
       propertyPath: efektDusme
       value: 
       objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
+    - target: {fileID: 8371330719456820816, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8371330719456820816, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
 --- !u!4 &6617478280850030318 stripped
@@ -43748,6 +43908,14 @@ PrefabInstance:
       propertyPath: efektDusme
       value: 
       objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
+    - target: {fileID: 8371330719456820816, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8371330719456820816, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86be6fade75d9492fb8327f2a156602f, type: 3}
 --- !u!4 &6617478280811374028 stripped
@@ -43814,6 +43982,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 050fe89a0651e90458b82b5493ddc35f, type: 2}
+    - target: {fileID: 8811768991628782442, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811768991628782442, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8869825643984391249, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
       propertyPath: efekt
       value: 
@@ -43896,6 +44072,14 @@ PrefabInstance:
       propertyPath: efektDusme
       value: 
       objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
+    - target: {fileID: 7802047398012147022, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802047398012147022, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
 --- !u!4 &6613996188827308145 stripped
@@ -43962,6 +44146,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3d1f3fcf0e2274849bcc3966310d5731, type: 2}
+    - target: {fileID: 5670215618783067777, guid: 3468aaf93e40c4920924867f04931a46, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5670215618783067777, guid: 3468aaf93e40c4920924867f04931a46, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7514174567035050775, guid: 3468aaf93e40c4920924867f04931a46, type: 3}
       propertyPath: efekt
       value: 
@@ -44044,6 +44236,14 @@ PrefabInstance:
       propertyPath: efektDusme
       value: 
       objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
+    - target: {fileID: 7802047398012147022, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802047398012147022, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
 --- !u!4 &6613996188778676840 stripped
@@ -44118,6 +44318,14 @@ PrefabInstance:
       propertyPath: efektDusme
       value: 
       objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
+    - target: {fileID: 7802047398012147022, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802047398012147022, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
 --- !u!4 &6613996188965496336 stripped
@@ -44184,6 +44392,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 050fe89a0651e90458b82b5493ddc35f, type: 2}
+    - target: {fileID: 8811768991628782442, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811768991628782442, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8869825643984391249, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
       propertyPath: efekt
       value: 
@@ -44348,6 +44564,14 @@ PrefabInstance:
       propertyPath: efektDusme
       value: 
       objectReference: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
+    - target: {fileID: 7802047398012147022, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802047398012147022, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e855c3aabf223486eb061cd562fd69fc, type: 3}
 --- !u!4 &8353696643599814315 stripped
@@ -44414,6 +44638,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 050fe89a0651e90458b82b5493ddc35f, type: 2}
+    - target: {fileID: 8811768991628782442, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811768991628782442, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8869825643984391249, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
       propertyPath: efekt
       value: 
