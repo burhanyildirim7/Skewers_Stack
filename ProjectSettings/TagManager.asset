@@ -18,6 +18,7 @@ TagManager:
   - Tail
   - Noktalar
   - OyunSonuEfekt
+  - Hedef
   layers:
   - Default
   - TransparentFX

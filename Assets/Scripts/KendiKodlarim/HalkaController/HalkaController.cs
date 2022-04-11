@@ -26,9 +26,9 @@ public class HalkaController : MonoBehaviour
 
     private GameObject hedef1;
     private GameObject hedef2;
-    private GameObject hedef3;
+    private GameObject hedef;   //Objenin asil gidecegi yeri ifade eder
 
-    //120
+
     void Start()
     {
         tasController = GameObject.FindObjectOfType<TasController>();
@@ -46,7 +46,7 @@ public class HalkaController : MonoBehaviour
         yield return new WaitForSeconds(.1f);
         hedef1 = GameObject.FindWithTag("Noktalar").transform.GetChild(0).transform.gameObject;
         hedef2 = GameObject.FindWithTag("Noktalar").transform.GetChild(1).transform.gameObject;
-        hedef3 = GameObject.FindWithTag("Noktalar").transform.GetChild(2).transform.gameObject;
+        hedef = GameObject.FindWithTag("Hedef");
 
        
     }
@@ -94,7 +94,7 @@ public class HalkaController : MonoBehaviour
 
             if (i < 181)
             {
-                tasController.allChildsTail[i].transform.localPosition += Vector3.right * eksenX;
+                tasController.allChildsTail[i].transform.localPosition += Vector3.right * eksenX / 3;
             }
             yield return new WaitForSeconds(donuslerArasindakiSayi);
         }
@@ -142,14 +142,15 @@ public class HalkaController : MonoBehaviour
         cameraMovement.sonTakip2 = true;
         while (true)
         {
-            if (Vector3.Distance(tail.transform.position, hedef3.transform.position) >= .05f)
+            if (Vector3.Distance(tail.transform.position, hedef.transform.position) >= .05f)
             {
-                tail.transform.position = Vector3.MoveTowards(tail.transform.position, hedef3.transform.position, Time.deltaTime * 5);
-                tail.transform.rotation = Quaternion.Slerp(tail.transform.rotation, hedef3.transform.rotation, Time.deltaTime * 2);
-                tail.transform.localScale = Vector3.MoveTowards(tail.transform.localScale, Vector3.one * .05f, Time.deltaTime * 1.75f);
+                tail.transform.position = Vector3.MoveTowards(tail.transform.position, hedef.transform.position, Time.deltaTime * 5);
+                tail.transform.rotation = Quaternion.Slerp(tail.transform.rotation, hedef.transform.rotation, Time.deltaTime * 2);
+                tail.transform.localScale = Vector3.MoveTowards(tail.transform.localScale, hedef.transform.lossyScale, Time.deltaTime * 1.75f);
             }
             else
             {
+                tail.transform.parent = hedef.transform;
                 break;
             }
 

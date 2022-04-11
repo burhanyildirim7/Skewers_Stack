@@ -55,7 +55,7 @@ public class CameraMovement : MonoBehaviour
         {
             if(sonTakip2)
             {
-                transform.position = Vector3.Lerp(transform.position, tail.transform.position + Vector3.up * 3 - Vector3.forward * 12, Time.deltaTime * 2f);
+                transform.position = Vector3.Lerp(transform.position, tail.transform.position + Vector3.up * .6f - Vector3.forward * 2, Time.deltaTime * 2f);
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(Vector3.right * 15), Time.deltaTime * 150);
             }
             else

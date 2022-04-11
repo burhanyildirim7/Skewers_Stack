@@ -66,9 +66,19 @@ public class DegerliTas : MonoBehaviour
             {
                 transform.parent = tasController.allChildsTail[(int)(childSayisi * 180 / tasController.taslar.Count)].transform;
                 transform.localPosition = Vector3.zero;
+                StartCoroutine(BoyutBuyult());
                 break;
             }
             yield return sonTarafBekleme;
+        }
+    }
+
+    IEnumerator BoyutBuyult()
+    {
+       while(transform.localScale.y <= 1)
+        {
+            transform.localScale = Vector3.Lerp(transform.localScale, Vector3.one , Time.deltaTime * 1);
+            yield return null;
         }
     }
 
