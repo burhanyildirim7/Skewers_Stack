@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1973566819044790994}
   m_Layer: 0
   m_Name: gem_12
-  m_TagString: Untagged
+  m_TagString: collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,9 +29,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433673758473894}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4420954b0b3b541deaef8714e66582eb, type: 2}
+  - {fileID: 2100000, guid: 5b165a09fcc134ca6a6c2467abd6e36a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -131,10 +131,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &1973566819044790994
 MonoBehaviour:
@@ -148,5 +148,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3345844cfef1f45449a9e85a3d9491fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  efekt: {fileID: 0}
-  noktalar: []
+  efekt: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+  efektDusme: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
