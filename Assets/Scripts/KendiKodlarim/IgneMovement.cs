@@ -16,7 +16,11 @@ public class IgneMovement : MonoBehaviour
 
     [Header("OyunIciModlar")]
     private bool saplamaModu;
-  
+    private bool sapliyorMu;
+
+    [Header("Efekt")]
+    [SerializeField] private ParticleSystem efektRuzgar;
+
     void Start()
     {
         StartingEvents();
@@ -26,36 +30,28 @@ public class IgneMovement : MonoBehaviour
     {
         anim.Play("Sallanma");
         saplamaModu = false;
-
-        StartCoroutine(OyunSonuKontrol());
+        sapliyorMu = false;
     }
 
-    IEnumerator OyunSonuKontrol()
-    {
-        while(GameController.instance.isContinue)
-        {
-
-            anim.Stop();
-            yield return new WaitForSeconds(.2f);
-        }
-    }
+   
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0) && GameController.instance.isContinue && !saplamaModu)
+        if (Input.GetMouseButtonDown(0) && GameController.instance.isContinue && !saplamaModu)
         {
             lastTouchPoint = Input.mousePosition;
-            saplamaModu = true; 
+            saplamaModu = true;
         }
 
-        if (Input.GetMouseButtonUp(0) && GameController.instance.isContinue && saplamaModu)
+        if (Input.GetMouseButtonUp(0) && GameController.instance.isContinue && saplamaModu && !sapliyorMu)
         {
+            sapliyorMu = true;
             saplamaModu = false;
             if (Input.mousePosition.y >= lastTouchPoint.y + 20)
             {
-                StopCoroutine(IgneSaplamaDurdur());
-                StopCoroutine(IgneyiSapla());
+                //  StopCoroutine(IgneSaplamaDurdur());
+                //StopCoroutine(IgneyiSapla());
 
                 if (Input.mousePosition.x >= lastTouchPoint.x)
                 {
@@ -70,7 +66,7 @@ public class IgneMovement : MonoBehaviour
                     StartCoroutine(IgneSaplamaDurdur());
                 }
             }
-          
+
         }
     }
 
@@ -80,13 +76,16 @@ public class IgneMovement : MonoBehaviour
 
     private IEnumerator IgneyiSapla()
     {
+
+
         anim.Play("Saplama");
         GameController.instance.isStabbing = true;
-        while(GameController.instance.isStabbing)
+        while (GameController.instance.isStabbing)
         {
             igne.transform.rotation = Quaternion.Slerp(igne.transform.rotation, Quaternion.Euler(Vector3.up * aci), Time.deltaTime * 25f);
-            if(saplamaModu)
+            if (saplamaModu)
             {
+                //  StopCoroutine(IgneSaplamaDurdur());
                 break;
             }
             yield return null;
@@ -95,21 +94,28 @@ public class IgneMovement : MonoBehaviour
 
     private IEnumerator IgneSaplamaDurdur()
     {
-        yield return new WaitForSeconds(1f);
-        if (saplamaModu)
-        {
-            StopCoroutine(IgneSaplamaDurdur());
-        }
+        
+        yield return new WaitForSeconds(.15f);
+        efektRuzgar.Play();
+        yield return new WaitForSeconds(.2f);
+        efektRuzgar.Stop();
+        yield return new WaitForSeconds(.4f);
+        
+
+        StopCoroutine(IgneyiSapla());
+
         anim.Play("Sallanma");
         GameController.instance.isStabbing = false;
         while (igne.transform.rotation.eulerAngles.y >= 1)
         {
-            igne.transform.rotation = Quaternion.Slerp(igne.transform.rotation, Quaternion.Euler(Vector3.zero), Time.deltaTime * 100f);
-            if (saplamaModu)
+            igne.transform.rotation = Quaternion.Slerp(igne.transform.rotation, Quaternion.Euler(Vector3.zero), Time.deltaTime * 85f);
+            if (saplamaModu && Mathf.Abs(igne.transform.rotation.eulerAngles.y) <= 1)
             {
+
                 break;
             }
             yield return null;
         }
+        sapliyorMu = false;
     }
 }

@@ -70,8 +70,11 @@ public class TasController : MonoBehaviour
     {
         for (int i = 0; i < adet; i++)
         {
-            taslar[taslar.Count - 1].GetComponent<DegerliTas>().TasiDusur();
-            taslar.Remove(taslar[taslar.Count - 1]);
+            if(taslar.Count > 0)
+            {
+                taslar[taslar.Count - 1].GetComponent<DegerliTas>().TasiDusur();
+                taslar.Remove(taslar[taslar.Count - 1]);
+            }
         }
 
         tasSayisi = taslar.Count;

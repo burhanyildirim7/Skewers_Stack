@@ -41,6 +41,8 @@ public class PlayerController : MonoBehaviour
         halkaController = GameObject.FindObjectOfType<HalkaController>();
         tasController = GameObject.FindObjectOfType<TasController>();
         cameraMovement = GameObject.FindObjectOfType<CameraMovement>();
+
+
     }
 
     void Start()
