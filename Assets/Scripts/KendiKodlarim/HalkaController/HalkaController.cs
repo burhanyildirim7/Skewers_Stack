@@ -151,6 +151,7 @@ public class HalkaController : MonoBehaviour
             else
             {
                 tail.transform.parent = hedef.transform;
+                MoreMountains.NiceVibrations.MMVibrationManager.Haptic(MoreMountains.NiceVibrations.HapticTypes.MediumImpact);
                 break;
             }
 

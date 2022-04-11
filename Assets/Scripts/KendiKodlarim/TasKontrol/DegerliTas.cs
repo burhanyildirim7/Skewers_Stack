@@ -51,6 +51,8 @@ public class DegerliTas : MonoBehaviour
         toplandiMi = false;
         transform.parent = null;
 
+        Destroy(gameObject, 2);
+
 
         ParticleSystem dEfekt = Instantiate(efektDusme, transform.position, Quaternion.identity);
         dEfekt.Play();

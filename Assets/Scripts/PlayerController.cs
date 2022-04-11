@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private ParticleSystem engelCarpmaEfekt;
     [SerializeField] private GameObject efektArti;
     [SerializeField] private GameObject efektEksi;
-    private Transform igne;
+    [SerializeField] private ParticleSystem efektBalon;
 
     [Header("Controllerler")]
     private HalkaController halkaController;
@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     private GameObject tail;
     private TailAnimator2 tailAnimator2;
 
-    
+    private Transform igne;
 
 
     private void Awake()
@@ -41,8 +41,6 @@ public class PlayerController : MonoBehaviour
         halkaController = GameObject.FindObjectOfType<HalkaController>();
         tasController = GameObject.FindObjectOfType<TasController>();
         cameraMovement = GameObject.FindObjectOfType<CameraMovement>();
-
-
     }
 
     void Start()
@@ -67,6 +65,8 @@ public class PlayerController : MonoBehaviour
 
             GameObject obje = Instantiate(efektArti, transform.GetChild(0).transform.position + Vector3.forward * 1.75f + Vector3.right * .8f, Quaternion.identity);
             Destroy(obje, 2f);
+
+            MoreMountains.NiceVibrations.MMVibrationManager.Haptic(MoreMountains.NiceVibrations.HapticTypes.MediumImpact);
         }
         else if (other.CompareTag("engel"))
         {
@@ -88,6 +88,15 @@ public class PlayerController : MonoBehaviour
 
             GameObject obje = Instantiate(efektEksi, transform.GetChild(0).transform.position + Vector3.forward * 1.75f + Vector3.right * .8f, Quaternion.identity);
             Destroy(obje, 2f);
+
+            MoreMountains.NiceVibrations.MMVibrationManager.Haptic(MoreMountains.NiceVibrations.HapticTypes.MediumImpact);
+        }
+        else if(other.CompareTag("Balon"))
+        {
+            Instantiate(efektBalon, other.transform.position + Vector3.up * 2.25f, Quaternion.identity);
+            Destroy(other.gameObject);
+
+            MoreMountains.NiceVibrations.MMVibrationManager.Haptic(MoreMountains.NiceVibrations.HapticTypes.MediumImpact);
         }
         else if (other.CompareTag("finish"))
         {
@@ -108,6 +117,7 @@ public class PlayerController : MonoBehaviour
 
             GameObject.FindWithTag("OyunSonuEfekt").GetComponent<ParticleSystem>().Play();
         }
+        
     }
 
     private IEnumerator Bekle()

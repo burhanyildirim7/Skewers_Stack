@@ -30,6 +30,8 @@ public class GameController : MonoBehaviour
         isContinue = false;
         isFinished = false;
         isStabbing = true;
+
+        score = 0;
     }
     
     public void ActivateToStabbingMode()

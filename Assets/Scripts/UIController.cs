@@ -15,6 +15,7 @@ public class UIController : MonoBehaviour
     private HalkaController halkaController;
     private TasController tasController;
     private CameraMovement cameraMovement;
+    private IgneMovement igneMovement;
 
     // singleton yapisi burada kuruluyor.
     private void Awake()
@@ -25,6 +26,7 @@ public class UIController : MonoBehaviour
         halkaController = GameObject.FindObjectOfType<HalkaController>();
         tasController = GameObject.FindObjectOfType<TasController>();
         cameraMovement = GameObject.FindObjectOfType<CameraMovement>();
+        igneMovement = GameObject.FindObjectOfType<IgneMovement>();
     }
 
     private void Start()
@@ -50,7 +52,7 @@ public class UIController : MonoBehaviour
     // TAPTOSTART TUSUNA BASILDISINDA  --- GIRIS EKRANINDA VE LEVEL BASLARINDA
     public void TapToStartButtonClick()
     {
-
+        igneMovement.StartingEvents();
         GameController.instance.isContinue = true;
         //PlayerController.instance.SetArmForGaming();
         TapToStartPanel.SetActive(false);
@@ -85,6 +87,9 @@ public class UIController : MonoBehaviour
     // NEXT LEVEL TUSUNA BASILDIGINDA... WIN EKRANINDAKI BUTON
     public void NextLevelButtonClick()
     {
+        PlayerPrefs.SetInt("totalScore", PlayerPrefs.GetInt("totalScore") + GameController.instance.score);
+
+
         SetTapToStartScoreText();
         TapToStartPanel.SetActive(true);
         WinPanel.SetActive(false);
@@ -97,6 +102,8 @@ public class UIController : MonoBehaviour
         tasController.StartingEvents();
         GameController.instance.StartingEvents();
         cameraMovement.StartingEvents();
+
+       
     }
 
 
@@ -123,6 +130,8 @@ public class UIController : MonoBehaviour
     public void WinScreenScore()
     {
         winScreenScoreText.text = GameController.instance.score.ToString();
+
+        
     }
 
     /// <summary>

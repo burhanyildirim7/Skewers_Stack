@@ -66,7 +66,11 @@ public class IgneMovement : MonoBehaviour
                     StartCoroutine(IgneSaplamaDurdur());
                 }
             }
-
+            else
+            {
+                saplamaModu = false;
+                sapliyorMu = false;
+            }
         }
     }
 
@@ -76,8 +80,6 @@ public class IgneMovement : MonoBehaviour
 
     private IEnumerator IgneyiSapla()
     {
-
-
         anim.Play("Saplama");
         GameController.instance.isStabbing = true;
         while (GameController.instance.isStabbing)
