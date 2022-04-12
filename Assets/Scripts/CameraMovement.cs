@@ -50,11 +50,11 @@ public class CameraMovement : MonoBehaviour
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
         if (sonTakip1)
         {
-            if(sonTakip2)
+            if (sonTakip2)
             {
                 transform.position = Vector3.Lerp(transform.position, tail.transform.position + Vector3.up * 4.5f - Vector3.forward * 11, Time.deltaTime * 1f);
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(Vector3.right * 15), Time.deltaTime * 150);
