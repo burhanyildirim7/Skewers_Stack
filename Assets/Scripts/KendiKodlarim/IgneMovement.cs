@@ -40,6 +40,7 @@ public class IgneMovement : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && GameController.instance.isContinue && !saplamaModu)
         {
+            lastTouchPoint = Vector3.zero;
             lastTouchPoint = Input.mousePosition;
             saplamaModu = true;
         }
