@@ -581,7 +581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tailP: {fileID: 7307504017030942817, guid: c1fd551979a37684882df048d483ea6f, type: 3}
   kemikDondurmeKatSayi: 1
-  donuslerArasindakiSayi: 0.001
+  donuslerArasindakiSayi: 0.0025
 --- !u!1 &955729541
 GameObject:
   m_ObjectHideFlags: 0
@@ -34314,7 +34314,7 @@ MonoBehaviour:
   RandomizeAtStart: 0
   mat: {fileID: 2100000, guid: b0866ec1978db7842b466f89e5227391, type: 2}
   DrawGizmos: 1
-  BonesCount: 181
+  BonesCount: 61
   AddTailAnimator: 1
   DetachForOptimization: 0
   TargetTailAnimator: {fileID: 5017104762110847694}

@@ -90,9 +90,9 @@ public class HalkaController : MonoBehaviour
 
         for (int i = 0; i < tasController.allChildsTail.Count * kemikDondurmeKatSayi; i++)
         {
-            tasController.allChildsTail[i % 181].transform.localRotation = Quaternion.Euler(Vector3.up * 2 / kemikDondurmeKatSayi * ((int)(i / 181) + 1));
+            tasController.allChildsTail[i % 181].transform.localRotation = Quaternion.Euler(Vector3.up * 6 / kemikDondurmeKatSayi * ((int)(i / 61) + 1));
 
-            if (i < 181)
+            if (i < 61)
             {
                 tasController.allChildsTail[i].transform.localPosition += Vector3.right * eksenX / 3;
             }

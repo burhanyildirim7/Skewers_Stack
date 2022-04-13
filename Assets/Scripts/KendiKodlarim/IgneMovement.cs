@@ -97,11 +97,11 @@ public class IgneMovement : MonoBehaviour
     private IEnumerator IgneSaplamaDurdur()
     {
         
-        yield return new WaitForSeconds(.15f);
+        yield return new WaitForSeconds(.1f);
         efektRuzgar.Play();
-        yield return new WaitForSeconds(.2f);
+        yield return new WaitForSeconds(.15f);
         efektRuzgar.Stop();
-        yield return new WaitForSeconds(.4f);
+        yield return new WaitForSeconds(.3f);
         
 
         StopCoroutine(IgneyiSapla());
