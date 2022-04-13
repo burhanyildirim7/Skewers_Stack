@@ -111,8 +111,8 @@ public class DegerliTas : MonoBehaviour
         /*int gecilenNoktaSayisi = 0;
         int gecilenNoktaSayisi2 = 0;*/
 
-         gecilenNoktaSayisi = 0;
-         gecilenNoktaSayisi2 = 0;
+        gecilenNoktaSayisi = 0;
+        gecilenNoktaSayisi2 = 0;
         parentObj = parent1;
 
         basladiMi = true;
@@ -186,7 +186,7 @@ public class DegerliTas : MonoBehaviour
                         transform.parent = parentObj;
                         transform.rotation = Quaternion.Euler(Vector3.zero);
                         transform.localPosition = Vector3.zero;
-                        // break;
+                        basladiMi = false;
                     }
                 }
             }

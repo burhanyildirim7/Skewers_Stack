@@ -30,9 +30,9 @@ public class TasController : MonoBehaviour
         {
             if (i == 0)
             {
-                childsOfTheTail.Add(tail2.transform.GetChild(0).transform.gameObject);
+                childsOfTheTail.Add(tail2.transform.GetChild(0).transform.gameObject.transform.GetChild(0).transform.gameObject);
                 allChildsTail.Add(tail2.transform.GetChild(0).transform.gameObject);
-                SonChild = tail2.transform.GetChild(0).transform.gameObject;
+                SonChild = tail2.transform.GetChild(0).transform.gameObject.transform.GetChild(0).transform.gameObject;
             }
             else
             {

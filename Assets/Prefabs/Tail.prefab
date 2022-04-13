@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circlePoints: 16
-  LengthSegments: 181
+  LengthSegments: 180
   ForwardLength: 40
   Fatness: 0.4
   LengthScale:
