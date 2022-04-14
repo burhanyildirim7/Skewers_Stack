@@ -30886,7 +30886,7 @@ Transform:
   m_GameObject: {fileID: 6618298227212331033}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -4, y: 0, z: 120}
-  m_LocalScale: {x: 0.5, y: 125, z: 0.5}
+  m_LocalScale: {x: 1, y: 125, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6618298226861007890}
@@ -30920,7 +30920,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0769c541aa5943f4da0f1b2bd019bd9e, type: 2}
+  - {fileID: 2100000, guid: 865d3d8408dc78342beb1514db3ea8f6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31024,7 +31024,7 @@ Transform:
   m_GameObject: {fileID: 6618298228177306217}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 4, y: 0, z: 120}
-  m_LocalScale: {x: 0.5, y: 125, z: 0.5}
+  m_LocalScale: {x: 1, y: 125, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6618298226861007890}
@@ -31058,7 +31058,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0769c541aa5943f4da0f1b2bd019bd9e, type: 2}
+  - {fileID: 2100000, guid: 4eb36ad0b0d98f647bf5371de9af48e6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -41934,6 +41934,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building
       objectReference: {fileID: 0}
+    - target: {fileID: 5366451275464837299, guid: af3167c12d91ee545a669ba1acbc602a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af3167c12d91ee545a669ba1acbc602a, type: 3}
 --- !u!4 &7161594167045736718 stripped
@@ -43347,7 +43351,7 @@ PrefabInstance:
     - target: {fileID: 8772991094931533282, guid: 4e73a0bc81c844e83ba3b8d6381d8a7a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d459eb78a977cec4a87cae72585fb989, type: 2}
+      objectReference: {fileID: 2100000, guid: 904509329e902f147b28a2d5781f5e4a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e73a0bc81c844e83ba3b8d6381d8a7a, type: 3}
 --- !u!4 &4478123127748810226 stripped
@@ -43534,6 +43538,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23090506044549370, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5d1489eaf7db44f7e843af34cc2072ae, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
 --- !u!4 &6613978674484881774 stripped
@@ -44010,25 +44018,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Purple_Balloon
       objectReference: {fileID: 0}
-    - target: {fileID: 140462, guid: 3a0344398b3f44e97b9c840043a24a3a, type: 3}
-      propertyPath: m_TagString
-      value: Balon
-      objectReference: {fileID: 0}
     - target: {fileID: 464996, guid: 3a0344398b3f44e97b9c840043a24a3a, type: 3}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 464996, guid: 3a0344398b3f44e97b9c840043a24a3a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 464996, guid: 3a0344398b3f44e97b9c840043a24a3a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 464996, guid: 3a0344398b3f44e97b9c840043a24a3a, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 464996, guid: 3a0344398b3f44e97b9c840043a24a3a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -44069,10 +44061,6 @@ PrefabInstance:
     - target: {fileID: 464996, guid: 3a0344398b3f44e97b9c840043a24a3a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541977160105687654, guid: 3a0344398b3f44e97b9c840043a24a3a, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a0344398b3f44e97b9c840043a24a3a, type: 3}

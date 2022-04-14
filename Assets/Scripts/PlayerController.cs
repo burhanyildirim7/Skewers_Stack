@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
             other.transform.gameObject.tag = "Untagged";
 
             GameObject obje = Instantiate(efektArti, transform.GetChild(0).transform.position + Vector3.forward * 1.75f + Vector3.right * .8f, Quaternion.identity);
-            Destroy(obje, 2f);
+            Destroy(obje, 1f);
 
             MoreMountains.NiceVibrations.MMVibrationManager.Haptic(MoreMountains.NiceVibrations.HapticTypes.MediumImpact);
         }
@@ -72,22 +72,25 @@ public class PlayerController : MonoBehaviour
         {
             // ENGELELRE CARPINCA YAPILACAKLAR....
             GameController.instance.SetScore(-collectibleDegeri); // ORNEK KULLANIM detaylar icin ctrl+click yapip fonksiyon aciklamasini oku
-            if (GameController.instance.score < 0) // SKOR SIFIRIN ALTINA DUSTUYSE
-            {
-                // FAİL EVENTLERİ BURAYA YAZILACAK..
-                GameController.instance.isContinue = false; // çarptığı anda oyuncunun yerinde durması ilerlememesi için
-                UIController.instance.ActivateLooseScreen(); // Bu fonksiyon direk çağrılada bilir veya herhangi bir effect veya animasyon bitiminde de çağrılabilir..
-                                                             // oyuncu fail durumunda bu fonksiyon çağrılacak.. 
-            }
+            /* if (GameController.instance.score < 0) // SKOR SIFIRIN ALTINA DUSTUYSE
+             {
+                 // FAİL EVENTLERİ BURAYA YAZILACAK..
+                 GameController.instance.isContinue = false; // çarptığı anda oyuncunun yerinde durması ilerlememesi için
+                 UIController.instance.ActivateLooseScreen(); // Bu fonksiyon direk çağrılada bilir veya herhangi bir effect veya animasyon bitiminde de çağrılabilir..
+                                                              // oyuncu fail durumunda bu fonksiyon çağrılacak.. 
+             }
 
-            tasController.TasDusur(1);
+             tasController.TasDusur(1);*/
+
+            tasController.TasEkle(other.gameObject);
+
             other.transform.gameObject.tag = "Untagged"; //Bir engelin bir tane tas dururebilmesi icindir
 
 
             Instantiate(engelCarpmaEfekt, igne.transform.position + igne.transform.forward * transform.localScale.z / 2, Quaternion.Euler(Vector3.up * transform.rotation.eulerAngles.y + Vector3.up * 180));
 
             GameObject obje = Instantiate(efektEksi, transform.GetChild(0).transform.position + Vector3.forward * 1.75f + Vector3.right * .8f, Quaternion.identity);
-            Destroy(obje, 2f);
+            Destroy(obje, 1f);
 
             MoreMountains.NiceVibrations.MMVibrationManager.Haptic(MoreMountains.NiceVibrations.HapticTypes.MediumImpact);
         }
@@ -97,7 +100,7 @@ public class PlayerController : MonoBehaviour
 
 
             GameObject obje = Instantiate(efektEksi, transform.GetChild(0).transform.position + Vector3.forward * 1.75f + Vector3.right * .8f, Quaternion.identity);
-            Destroy(obje, 2f);
+            Destroy(obje, .5f);
 
             Instantiate(efektBalon, other.transform.position + Vector3.up * 2.25f, Quaternion.identity);
             Destroy(other.gameObject);

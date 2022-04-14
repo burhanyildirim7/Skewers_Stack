@@ -82,7 +82,8 @@ public class TasController : MonoBehaviour
 
     public void TasEkle(GameObject eklenecekTas)
     {
-        eklenecekTas.transform.localScale = Vector3.one * .5f;
+        //eklenecekTas.transform.localScale = Vector3.one * .5f;
+        eklenecekTas.transform.localScale = eklenecekTas.transform.localScale * .5f;
         eklenecekTas.GetComponent<DegerliTas>().TasEklemeProcces(taslar.Count);
         eklenecekTas.GetComponent<DegerliTas>().KonumaGonder(taslar.Count, childsOfTheTail[taslar.Count].transform);
         eklenecekTas.transform.localRotation = Quaternion.Euler(Vector3.zero);

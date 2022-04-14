@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 444177409703286654}
   - component: {fileID: -3103831418135881003}
   - component: {fileID: 8717545521512825463}
+  - component: {fileID: 8367608252278878141}
   m_Layer: 0
   m_Name: Poop
   m_TagString: engel
@@ -63,9 +64,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1792539558728417982, guid: 92a78f2325f855641b7eef3c444384cd, type: 3}
+  - {fileID: 2100000, guid: 7c0ac020ed7b5db4a8846131642b02ff, type: 2}
   - {fileID: -8373584595250389242, guid: 92a78f2325f855641b7eef3c444384cd, type: 3}
-  - {fileID: 5200753494579969130, guid: 92a78f2325f855641b7eef3c444384cd, type: 3}
+  - {fileID: 2100000, guid: 42374f1035b32e8429e85a81b4a557dc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -120,3 +121,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8367608252278878141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6289170300132102762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3345844cfef1f45449a9e85a3d9491fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  efekt: {fileID: 9035791526663777419, guid: 2cfb09069b47dc341b2e83da5c281647, type: 3}
+  efektDusme: {fileID: 4577435478951227133, guid: 892be68697210c047ab1f2d1cdcdebe8, type: 3}
