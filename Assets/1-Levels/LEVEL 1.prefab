@@ -41678,7 +41678,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1735989688514166, guid: 3394356637fef427a8d6ae0d658056bc, type: 3}
       propertyPath: m_Name
-      value: gem_08
+      value: gem_08 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4035310235073524, guid: 3394356637fef427a8d6ae0d658056bc, type: 3}
       propertyPath: m_RootOrder
@@ -42556,7 +42556,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1233186935903672, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
       propertyPath: m_Name
-      value: gem_02 (11)
+      value: Hedef1
       objectReference: {fileID: 0}
     - target: {fileID: 4918819282942352, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
       propertyPath: m_RootOrder
@@ -42886,7 +42886,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1949659741641288, guid: 542bf27e73bc84ec897be3ce9ab0eff7, type: 3}
       propertyPath: m_Name
-      value: gem_17
+      value: Hedef2
       objectReference: {fileID: 0}
     - target: {fileID: 4838699639727160, guid: 542bf27e73bc84ec897be3ce9ab0eff7, type: 3}
       propertyPath: m_RootOrder
@@ -43072,7 +43072,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1735989688514166, guid: 3394356637fef427a8d6ae0d658056bc, type: 3}
       propertyPath: m_Name
-      value: gem_08 (1)
+      value: Hedef3
       objectReference: {fileID: 0}
     - target: {fileID: 4035310235073524, guid: 3394356637fef427a8d6ae0d658056bc, type: 3}
       propertyPath: m_RootOrder
@@ -43492,7 +43492,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1233186935903672, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
       propertyPath: m_Name
-      value: gem_02
+      value: gem_02 (10)
       objectReference: {fileID: 0}
     - target: {fileID: 4918819282942352, guid: 963302a8c88b945bfa8500292fa5937e, type: 3}
       propertyPath: m_RootOrder

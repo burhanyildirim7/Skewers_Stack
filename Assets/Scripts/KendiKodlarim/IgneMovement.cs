@@ -21,8 +21,13 @@ public class IgneMovement : MonoBehaviour
     [Header("Efekt")]
     [SerializeField] private ParticleSystem efektRuzgar;
 
+    private OnBoardinController onBoardinController;
+
     void Start()
     {
+        onBoardinController = GameObject.FindObjectOfType<OnBoardinController>();
+
+
         StartingEvents();
     }
 
@@ -81,6 +86,11 @@ public class IgneMovement : MonoBehaviour
 
     private IEnumerator IgneyiSapla()
     {
+        if(PlayerPrefs.GetInt("level") == 0 && onBoardinController.igneSapmaModunda)
+        {
+            onBoardinController.igneSapliyor = false;
+        }
+
         anim.Play("Saplama");
         GameController.instance.isStabbing = true;
         while (GameController.instance.isStabbing)
