@@ -78,7 +78,34 @@ public class DegerliTas : MonoBehaviour
         {
             if (GameController.instance.isFinished)
             {
-                transform.parent = tasController.allChildsTail[(int)(childSayisi * 60 / tasController.taslar.Count)].transform;
+
+                if (tasController.taslar.Count <= 60)
+                {
+                    transform.parent = tasController.allChildsTail[(int)(childSayisi * 60 / tasController.taslar.Count)].transform;
+                }
+                else if(tasController.taslar.Count <= 75)
+                {
+                    if((int)(childSayisi * 45 / tasController.taslar.Count) >= 60)
+                    {
+                        Destroy(gameObject);
+                    }
+                    transform.parent = tasController.allChildsTail[(int)(childSayisi * 45 / tasController.taslar.Count)].transform;
+                }
+                else if (tasController.taslar.Count <= 90)
+                {
+                    if ((int)(childSayisi * 37 / tasController.taslar.Count) >= 60)
+                    {
+                        Destroy(gameObject);
+                    }
+                    transform.parent = tasController.allChildsTail[(int)(childSayisi * 37 / tasController.taslar.Count)].transform;
+                }
+
+                //transform.parent = tasController.allChildsTail[(int)Mathf.Ceil(childSayisi * 61 / tasController.taslar.Count)].transform;
+
+
+
+
+
                 transform.localPosition = Vector3.zero;
                 StartCoroutine(BoyutBuyult());
                 break;
@@ -89,9 +116,9 @@ public class DegerliTas : MonoBehaviour
 
     IEnumerator BoyutBuyult()
     {
-       while(transform.localScale.y <= 1.15f)
+        while (transform.localScale.y <= 1.15f)
         {
-            transform.localScale = Vector3.Lerp(transform.localScale, Vector3.one , Time.deltaTime * 1.15f);
+            transform.localScale = Vector3.Lerp(transform.localScale, Vector3.one, Time.deltaTime * 1.15f);
             yield return null;
         }
     }
@@ -108,9 +135,6 @@ public class DegerliTas : MonoBehaviour
 
     public IEnumerator KonumaGonder2(int childSayisi, Transform parent1) //TasController icerisinden geliyor
     {
-        /*int gecilenNoktaSayisi = 0;
-        int gecilenNoktaSayisi2 = 0;*/
-
         gecilenNoktaSayisi = 0;
         gecilenNoktaSayisi2 = 0;
         parentObj = parent1;
@@ -118,53 +142,19 @@ public class DegerliTas : MonoBehaviour
         basladiMi = true;
 
         yield return null;
-       /* while (gecilenNoktaSayisi2 <= 1)
-        {
-            if (Vector3.Distance(transform.position, noktalar[gecilenNoktaSayisi2].transform.position) >= .1f)
-            {
-                transform.position = Vector3.MoveTowards(transform.position, noktalar[gecilenNoktaSayisi2].transform.position, Time.deltaTime * 13);
-            }
-            else
-            {
-                gecilenNoktaSayisi2++;
-            }
-            yield return null;
-        }
-
-
-        while (gecilenNoktaSayisi <= childSayisi)
-        {
-            if (Vector3.Distance(transform.position, tasController.taslar[gecilenNoktaSayisi].transform.position) >= .01f)
-            {
-                transform.position = Vector3.MoveTowards(transform.position, tasController.taslar[gecilenNoktaSayisi].transform.position, Time.deltaTime * 18);
-                transform.parent = tasController.taslar[gecilenNoktaSayisi].transform;
-            }
-            else
-            {
-                gecilenNoktaSayisi++;
-                if (gecilenNoktaSayisi - 1 == childSayisi)
-                {
-                    transform.parent = parent1;
-                    transform.rotation = Quaternion.Euler(Vector3.zero);
-                    transform.localPosition = Vector3.zero;
-                    break;
-                }
-            }
-            yield return null;
-        }*/
     }
 
     private bool basladiMi = false;
 
     void FixedUpdate()
     {
-        if(basladiMi)
+        if (basladiMi)
         {
             if (gecilenNoktaSayisi2 <= 1)
             {
                 if (Vector3.Distance(transform.position, noktalar[gecilenNoktaSayisi2].transform.position) >= .2f)
                 {
-                    transform.position = Vector3.MoveTowards(transform.position, noktalar[gecilenNoktaSayisi2].transform.position, Time.deltaTime * 13);
+                    transform.position = Vector3.MoveTowards(transform.position, noktalar[gecilenNoktaSayisi2].transform.position, Time.deltaTime * 19);
                 }
                 else
                 {
@@ -175,7 +165,7 @@ public class DegerliTas : MonoBehaviour
             {
                 if (Vector3.Distance(transform.position, tasController.taslar[gecilenNoktaSayisi].transform.position) >= .04f)
                 {
-                    transform.position = Vector3.MoveTowards(transform.position, tasController.taslar[gecilenNoktaSayisi].transform.position, Time.deltaTime * 18);
+                    transform.position = Vector3.MoveTowards(transform.position, tasController.taslar[gecilenNoktaSayisi].transform.position, Time.deltaTime * 22);
                     transform.parent = tasController.taslar[gecilenNoktaSayisi].transform;
                 }
                 else
@@ -191,7 +181,7 @@ public class DegerliTas : MonoBehaviour
                 }
             }
         }
-        
-            
+
+
     }
 }
