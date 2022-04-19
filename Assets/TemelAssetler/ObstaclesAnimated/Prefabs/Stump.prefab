@@ -26,30 +26,12 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 37.160675, y: 0, z: 11.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6537719950917857498}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &5904629249347758689
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5904629249347758688}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cae91b55c9791f946a3d2ee0f1e96217, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &4717832001676581298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -105,6 +87,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2964526706812692139, guid: bc3195f14a800a141baa17ac83d0c82b, type: 3}
+      propertyPath: m_TagString
+      value: ENGEL
+      objectReference: {fileID: 0}
     - target: {fileID: 6557794533546416745, guid: bc3195f14a800a141baa17ac83d0c82b, type: 3}
       propertyPath: m_Size.z
       value: 0.060898494
@@ -128,6 +114,26 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1191323258979759058, guid: bc3195f14a800a141baa17ac83d0c82b, type: 3}
   m_PrefabInstance: {fileID: 4717832001676581298}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &5904629249347758689
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5904629249347758688}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cae91b55c9791f946a3d2ee0f1e96217, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &6537719950917857498 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2000652243863759208, guid: bc3195f14a800a141baa17ac83d0c82b, type: 3}
