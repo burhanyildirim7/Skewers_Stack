@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 5165430365017618479}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 37.160675, y: 0, z: 11.82}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8000001, y: 0.8, z: 0.8000001}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6537719950917857498}
@@ -39,6 +39,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5165430365017618640}
     m_Modifications:
+    - target: {fileID: 320981768449385170, guid: bc3195f14a800a141baa17ac83d0c82b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4eb36ad0b0d98f647bf5371de9af48e6, type: 2}
     - target: {fileID: 1191323258979759058, guid: bc3195f14a800a141baa17ac83d0c82b, type: 3}
       propertyPath: m_Name
       value: SM_platform_engel_01c
@@ -91,6 +95,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: ENGEL
       objectReference: {fileID: 0}
+    - target: {fileID: 3585205957553302429, guid: bc3195f14a800a141baa17ac83d0c82b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 589e782f07da0144fa0a9e316e9bbf0f, type: 2}
     - target: {fileID: 6557794533546416745, guid: bc3195f14a800a141baa17ac83d0c82b, type: 3}
       propertyPath: m_Size.z
       value: 0.060898494
@@ -107,7 +115,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7568009985407459443, guid: bc3195f14a800a141baa17ac83d0c82b, type: 3}
+    - {fileID: 1643143269805333067, guid: bc3195f14a800a141baa17ac83d0c82b, type: 3}
+    - {fileID: 4154412746997505106, guid: bc3195f14a800a141baa17ac83d0c82b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bc3195f14a800a141baa17ac83d0c82b, type: 3}
 --- !u!1 &5904629249347758688 stripped
 GameObject:

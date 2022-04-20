@@ -154,7 +154,7 @@ public class DegerliTas : MonoBehaviour
             {
                 if (Vector3.Distance(transform.position, noktalar[gecilenNoktaSayisi2].transform.position) >= .2f)
                 {
-                    transform.position = Vector3.MoveTowards(transform.position, noktalar[gecilenNoktaSayisi2].transform.position, Time.deltaTime * 19);
+                    transform.position = Vector3.MoveTowards(transform.position, noktalar[gecilenNoktaSayisi2].transform.position, Time.deltaTime * 21);
                 }
                 else
                 {
@@ -165,7 +165,7 @@ public class DegerliTas : MonoBehaviour
             {
                 if (Vector3.Distance(transform.position, tasController.taslar[gecilenNoktaSayisi].transform.position) >= .04f)
                 {
-                    transform.position = Vector3.MoveTowards(transform.position, tasController.taslar[gecilenNoktaSayisi].transform.position, Time.deltaTime * 22);
+                    transform.position = Vector3.MoveTowards(transform.position, tasController.taslar[gecilenNoktaSayisi].transform.position, Time.deltaTime * 25);
                     transform.parent = tasController.taslar[gecilenNoktaSayisi].transform;
                 }
                 else

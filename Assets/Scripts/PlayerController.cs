@@ -94,6 +94,30 @@ public class PlayerController : MonoBehaviour
 
             MoreMountains.NiceVibrations.MMVibrationManager.Haptic(MoreMountains.NiceVibrations.HapticTypes.MediumImpact);
         }
+        else if(other.CompareTag("ENGEL"))
+        {
+            // ENGELELRE CARPINCA YAPILACAKLAR....
+            GameController.instance.SetScore(-collectibleDegeri); // ORNEK KULLANIM detaylar icin ctrl+click yapip fonksiyon aciklamasini oku
+             if (GameController.instance.score < 0) // SKOR SIFIRIN ALTINA DUSTUYSE
+             {
+                 // FAİL EVENTLERİ BURAYA YAZILACAK..
+                 GameController.instance.isContinue = false; // çarptığı anda oyuncunun yerinde durması ilerlememesi için
+                 UIController.instance.ActivateLooseScreen(); // Bu fonksiyon direk çağrılada bilir veya herhangi bir effect veya animasyon bitiminde de çağrılabilir..
+                                                              // oyuncu fail durumunda bu fonksiyon çağrılacak.. 
+             }
+
+             tasController.TasDusur(1);
+
+            other.transform.gameObject.tag = "Untagged"; //Bir engelin bir tane tas dururebilmesi icindir
+
+
+            Instantiate(engelCarpmaEfekt, igne.transform.position + igne.transform.forward * transform.localScale.z / 2, Quaternion.Euler(Vector3.up * transform.rotation.eulerAngles.y + Vector3.up * 180));
+
+            GameObject obje = Instantiate(efektEksi, transform.GetChild(0).transform.position + Vector3.forward * 1.75f + Vector3.right * .8f, Quaternion.identity);
+            Destroy(obje, 1f);
+
+            MoreMountains.NiceVibrations.MMVibrationManager.Haptic(MoreMountains.NiceVibrations.HapticTypes.MediumImpact);
+        }
         else if(other.CompareTag("Balon"))
         {
             tasController.TasDusur(1);

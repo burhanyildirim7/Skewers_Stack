@@ -51,9 +51,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7583202421920964563, guid: 06c8858cfabd3af4ca83267e92bc32e1, type: 3}
+      propertyPath: m_TagString
+      value: ENGEL
+      objectReference: {fileID: 0}
     - target: {fileID: 8556384812202905820, guid: 06c8858cfabd3af4ca83267e92bc32e1, type: 3}
       propertyPath: m_Name
       value: Rolling GrinderS (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06c8858cfabd3af4ca83267e92bc32e1, type: 3}
+--- !u!1 &7390583478089694541 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7583202421920964563, guid: 06c8858cfabd3af4ca83267e92bc32e1, type: 3}
+  m_PrefabInstance: {fileID: 1129368767043936926}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1760526323248155058
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7390583478089694541}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5734383, y: 0.57343847, z: 1.5697536}
+  m_Center: {x: -0.000000044703484, y: 0.00000002980233, z: 0}

@@ -71,5 +71,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HareketliSilindir
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7257341698570393797, guid: cc8ec99b52e14c54f8550cd20cc71680, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cc8ec99b52e14c54f8550cd20cc71680, type: 3}
