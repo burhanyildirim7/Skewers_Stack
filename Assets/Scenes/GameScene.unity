@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.47884, g: 0.8001845, b: 0.90072787, a: 1}
+  m_IndirectSpecularColor: {r: 0.4770398, g: 0.79908794, b: 0.8987446, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -482,11 +482,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631e7cd7676f52439dcf1f6bccce413, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 0.05
-  el2: {fileID: 4270133517271816310, guid: 5059d7e5adb1e0c4b949c5bc3dbec226, type: 3}
-  hedef: {fileID: 0}
-  igne: {fileID: 0}
-  onBoardingController: {fileID: 0}
 --- !u!1 &691903385
 GameObject:
   m_ObjectHideFlags: 0
@@ -928,13 +923,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a650a396e6261546bf839ceec227e39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  karakter: {fileID: 0}
-  el: {fileID: 640050017}
-  zamanYavaslatiliyorMu: 0
-  hedefZaman: 0.25
-  hedefObje: {fileID: 0}
-  igneSapliyor: 0
-  igneSapmaModunda: 0
 --- !u!1001 &1414676599
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1096,7 +1084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f83a6f3f10ed54a8eaca5f7c7fa443cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swerveSpeed: 4
+  swerveSpeed: 0.5
   _getPoint: {fileID: 326513068}
   _radius: 4
 --- !u!114 &1443049513
